@@ -1,0 +1,25 @@
+{
+  "name": "ZXTTInRN",
+  "version": "1.0.0",
+  "summary": "rn links",
+  "homepage": "http://facebook.github.io/react-native/",
+  "license": "MIT",
+  "authors": "tonyYo",
+  "platforms": {
+    "ios": "9.0",
+    "tvos": "9.2"
+  },
+  "source": {
+    "git": "http://jia-git.suryani.cn/tony.lin/rnspec.git",
+    "tag": "v1.0.0"
+  },
+  "source_files": "*.{h,m,mm}",
+  "dependencies": {
+    "React": [
+
+    ],
+    "CodePush": [
+      "5.7.0"
+    ]
+  }
+}
