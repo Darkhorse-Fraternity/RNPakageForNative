@@ -40,6 +40,7 @@
 //    }
     
     BridgeManage *bm = [BridgeManage shareInstance];
+    [bm run];
 //    ZMLoginUserInfoModel *info =  [QJShareTools getUserInfoModel].userInfo;
 //    NSString *tracking_id = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_Associative_Code];
 //    NSMutableDictionary *initialProperties = [NSMutableDictionary dictionaryWithCapacity:3];

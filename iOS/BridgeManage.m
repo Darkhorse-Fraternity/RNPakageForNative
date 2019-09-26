@@ -25,18 +25,27 @@ static BridgeManage *_singleInstance = nil;
     dispatch_once(&onceToken, ^{
         if (_singleInstance == nil) {
             _singleInstance = [[self alloc]init];
-            RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:_singleInstance launchOptions:nil];
-            _singleInstance.bridge = bridge;
+             _singleInstance.bundleRoot = @"node_modules/zxtt-rn/index";
+//            _singleInstance.bundleRoot = @"index";
+           
+           
         }
     }); 
     return _singleInstance;
+}
+
+
+-(void)run
+{
+    RCTBridge *bridge = [[RCTBridge alloc] initWithDelegate:_singleInstance launchOptions:nil];
+    _singleInstance.bridge = bridge;
 }
 
 #pragma rn url delegate
 - (NSURL *)sourceURLForBridge:(RCTBridge *)bridge
 {
 #if DEBUG
-    return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:@"node_modules/zxtt-rn/index" fallbackResource:nil];
+    return [[RCTBundleURLProvider sharedSettings] jsBundleURLForBundleRoot:self.bundleRoot fallbackResource:nil];
 #else
     return [CodePush bundleURL];
 #endif

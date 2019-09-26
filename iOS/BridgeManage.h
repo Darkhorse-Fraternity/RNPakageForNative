@@ -15,8 +15,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface BridgeManage : NSObject <RCTBridgeDelegate>
 
 @property(nonatomic,strong) RCTBridge *bridge;
+@property(nonatomic,strong) NSString *bundleRoot;
+
 
 +(instancetype)shareInstance;
+-(void)run;
 @end
 
 NS_ASSUME_NONNULL_END

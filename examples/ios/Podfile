@@ -1,17 +1,16 @@
 platform :ios, '9.0'
-require_relative  './node_modules/zxtt-rn/rn-pod'
+require_relative  '../../rn-pod'
 
 target 'ZXTTRNTest' do
   # Pods for ZXTTRNTest
-  pod 'ZXTTInRN', :path =>  './node_modules/zxtt-rn/iOS'
-  use_rn_pod!
+  pod 'ZXTTInRN', :path =>  '../../iOS'
+  use_rn_pod!('../../')
 
   target 'ZXTTRNTestTests' do
     inherit! :search_paths
     # Pods for testing
   end
-
-  use_native_modules!
+  
 end
 
 target 'ZXTTRNTest-tvOS' do

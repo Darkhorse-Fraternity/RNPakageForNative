@@ -5,6 +5,13 @@
     "zxtt"
   ],
   "version": "0.0.1",
+  "private": true,
+  "scripts": {
+    "start": "react-native start",
+    "test": "jest",
+    "lint": "eslint .",
+    "bundle-ios": "react-native bundle --entry-file='./node_modules/zxtt-rn/index.js' --bundle-output='./node_modules/zxtt-rn/main.jsbundle' --dev=false --platform='ios' --assets-dest='./node_modules/zxtt-rn' --verbose"
+  },
   "homepage": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git",
   "license": "MIT",
   "main": "index.js",
