@@ -1,27 +1,28 @@
 {
-  "name": "ZXTT",
+  "name": "zxtt-rn",
+  "description": "zxtt定制",
+  "keywords": [
+    "zxtt"
+  ],
   "version": "0.0.1",
-  "private": true,
-  "scripts": {
-    "start": "react-native start",
-    "test": "jest",
-    "lint": "eslint ."
+  "homepage": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git",
+  "license": "MIT",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git"
   },
   "dependencies": {
     "react": "16.8.6",
-    "react-native": "0.60.5"
-  },
-  "devDependencies": {
-    "@babel/core": "^7.6.2",
-    "@babel/runtime": "^7.6.2",
-    "@react-native-community/eslint-config": "^0.0.5",
-    "babel-jest": "^24.9.0",
-    "eslint": "^6.4.0",
-    "jest": "^24.9.0",
-    "metro-react-native-babel-preset": "^0.56.0",
-    "react-test-renderer": "16.8.6"
-  },
-  "jest": {
-    "preset": "react-native"
+    "react-native": "0.60.5",
+    "react-native-code-push": "5.7.0",
+    "react-native-device-info": "2.3.1",
+    "react-native-gesture-handler": "1.3.0",
+    "react-native-simple-toast": "0.1.1",
+    "styled-components": "4.3.2",
+    "react-navigation": "3.11.0",
+    "moment": "2.24.0",
+    "@react-native-community/async-storage": "1.6.1",
+    "react-navigation-hooks": "1.0.3"
   }
 }
