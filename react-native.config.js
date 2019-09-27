@@ -16,6 +16,14 @@ module.exports = {
             'new CodePush(BuildConfig.CODEPUSH_KEY,getApplicationContext(),BuildConfig.DEBUG)',
         },
       },
-    }
+    },
+  },
+  project: {
+    ios: {
+      project: 'examples/ios/ZXTTRNTest.xcodeproj',
+    },
+    android: {
+      sourceDir: 'examples/android',
+    },
   },
 };
