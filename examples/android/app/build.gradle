@@ -152,9 +152,19 @@ android {
     }
     buildTypes {
         debug {
+            def props = rootProject.getConfigs("")
+            props.propertyNames().each { name ->
+                buildConfigField rootProject.valueType(props.getProperty(name.toString())), name,
+                        props.getProperty(name.toString())
+            }
             signingConfig signingConfigs.debug
         }
         release {
+            def props = rootProject.getConfigs("prod")
+            props.propertyNames().each { name ->
+                buildConfigField rootProject.valueType(props.getProperty(name.toString())), name,
+                        props.getProperty(name.toString())
+            }
             // Caution! In production, you need to generate your own keystore file.
             // see https://facebook.github.io/react-native/docs/signed-apk-android.
             signingConfig signingConfigs.debug
