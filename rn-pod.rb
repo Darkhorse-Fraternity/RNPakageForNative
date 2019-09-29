@@ -37,6 +37,9 @@ def use_rn_pod!(root = ".", config = nil)
     pod 'Folly', :podspec => root + '/node_modules/react-native/third-party-podspecs/Folly.podspec'
     
     pod 'RNGestureHandler', :path => rootPath + 'react-native-gesture-handler'
+    pod 'RNReanimated', :path => rootPath + 'react-native-reanimated'
+    pod 'RNScreens', :path => rootPath + 'react-native-screens'
+
     pod 'RNDeviceInfo', :path => rootPath + 'react-native-device-info'
     pod 'react-native-simple-toast', :path => rootPath + 'react-native-simple-toast'
     pod 'RNCAsyncStorage', :path => rootPath + '@react-native-community/async-storage'

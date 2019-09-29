@@ -229,9 +229,13 @@ PODS:
     - ReactCommon/jscallinvoker (= 0.61.1)
   - RNCAsyncStorage (1.6.1):
     - React
-  - RNDeviceInfo (2.3.1):
+  - RNDeviceInfo (3.1.4):
     - React
   - RNGestureHandler (1.4.1):
+    - React
+  - RNReanimated (1.3.0):
+    - React
+  - RNScreens (2.0.0-alpha.3):
     - React
   - SSZipArchive (2.2.2)
   - Yoga (1.14.0)
@@ -272,6 +276,8 @@ DEPENDENCIES:
   - "RNCAsyncStorage (from `../..//node_modules/@react-native-community/async-storage`)"
   - RNDeviceInfo (from `../..//node_modules/react-native-device-info`)
   - RNGestureHandler (from `../..//node_modules/react-native-gesture-handler`)
+  - RNReanimated (from `../..//node_modules/react-native-reanimated`)
+  - RNScreens (from `../..//node_modules/react-native-screens`)
   - Yoga (from `../..//node_modules/react-native/ReactCommon/yoga`)
   - ZXTTInRN (from `../../iOS`)
 
@@ -341,6 +347,10 @@ EXTERNAL SOURCES:
     :path: "../..//node_modules/react-native-device-info"
   RNGestureHandler:
     :path: "../..//node_modules/react-native-gesture-handler"
+  RNReanimated:
+    :path: "../..//node_modules/react-native-reanimated"
+  RNScreens:
+    :path: "../..//node_modules/react-native-screens"
   Yoga:
     :path: "../..//node_modules/react-native/ReactCommon/yoga"
   ZXTTInRN:
@@ -377,8 +387,10 @@ SPEC CHECKSUMS:
   React-RCTVibration: 8be61459e3749d1fb02cf414edd05b3007622882
   ReactCommon: 4fba5be89efdf0b5720e0adb3d8d7edf6e532db0
   RNCAsyncStorage: 2e2e3feb9bdadc752a026703d8c4065ca912e75a
-  RNDeviceInfo: 74ee98a0b3ef57604ea9953f03eca549a9335160
+  RNDeviceInfo: 88099e84466f053bae3f34c307b506738b2b6946
   RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa
+  RNReanimated: 6abbbae2e5e72609d85aabd92a982a94566885f1
+  RNScreens: 402a99b0a27c0c32f079cec12d3ccbd35e20cd7f
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   Yoga: d8c572ddec8d05b7dba08e4e5f1924004a177078
   ZXTTInRN: b1b2dd0cc528a09ae92da4ef15fe1b18fd2e1cb9

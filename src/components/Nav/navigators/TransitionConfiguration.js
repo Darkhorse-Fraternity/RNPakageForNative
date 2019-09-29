@@ -6,7 +6,7 @@
 import {Platform, Animated, Easing} from 'react-native';
 
 // import {HeaderStyleInterpolator} from 'react-navigation';
-import StackViewStyleInterpolator from 'react-navigation-stack/lib/module/views/StackView/StackViewStyleInterpolator';
+import {StackViewStyleInterpolator} from 'react-navigation-stack';
 import * as Transition from './Transition';
 
 // https://github.com/react-community/react-navigation/issues/85  穿透共享元素讨论

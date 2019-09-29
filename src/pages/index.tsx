@@ -1,6 +1,6 @@
-import {createStackNavigator, createAppContainer, NavigationStackViewConfig} from 'react-navigation';
+import { createAppContainer,CreateNavigatorConfig} from 'react-navigation';
 import {NativeModules, Platform} from 'react-native';
-
+import {createStackNavigator } from 'react-navigation-stack'
 // 默认背景色
 import {defaultNavigationOptions} from '../components/Nav/navigationOptions';
 import {TransitionConfiguration} from '../components/Nav/navigators/TransitionConfiguration';
@@ -13,7 +13,7 @@ import {NativeBackButton} from '../components/Nav/HeaderBackButton'
 // const {backHandleControl} = Tool;
 
 const cardStyle = {backgroundColor: 'white'};
-const stackDefoultConfig:NavigationStackViewConfig = {
+const stackDefoultConfig:CreateNavigatorConfig = {
   defaultNavigationOptions,
   transitionConfig: TransitionConfiguration,
   cardStyle,

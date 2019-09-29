@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import {Animated} from 'react-native';
 
-// eslint-disable-next-line import/prefer-default-export
 export const StyledArrow = styled(Animated.View)`
   border-bottom-width: ${props => props.theme.hairlineWidth * 5};
   border-right-width: ${props => props.theme.hairlineWidth * 5};

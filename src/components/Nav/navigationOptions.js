@@ -8,7 +8,6 @@ import React from 'react';
 // import { strings } from '../../../../locales/i18n';
 import {HeaderBackImage2} from './HeaderBackButton';
 
-// eslint-disable-next-line import/prefer-default-export
 export const defaultNavigationOptions = {
   headerStyle: {
     backgroundColor: 'white',
