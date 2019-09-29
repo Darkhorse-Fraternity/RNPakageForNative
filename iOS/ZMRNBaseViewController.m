@@ -29,12 +29,12 @@
 }
 -(void)initData{
      self.openBaseRouteBackBtn =false;
+    
 }
 
 //findDesigner
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
 //    if(self.navigationController){
 //        self.openBaseRouteBackBtn = self.navigationController.childViewControllers.count > 1;
 //    }
@@ -43,10 +43,13 @@
     [bm run];
 //    ZMLoginUserInfoModel *info =  [QJShareTools getUserInfoModel].userInfo;
 //    NSString *tracking_id = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_Associative_Code];
-//    NSMutableDictionary *initialProperties = [NSMutableDictionary dictionaryWithCapacity:3];
+    NSMutableDictionary *initialProperties = [NSMutableDictionary dictionaryWithCapacity:3];
 //    initialProperties[@"config"] = @{ @"api_html_host":API_HTML_HOST};
-//    initialProperties[@"initialRouteName"] = self.initialRouteName;
-//    initialProperties[@"openBaseRouteBackBtn"] = @(self.openBaseRouteBackBtn);
+    initialProperties[@"initialRouteName"] = self.initialRouteName;
+    initialProperties[@"openBaseRouteBackBtn"] = @(self.openBaseRouteBackBtn);
+    if(self.initialProperties){
+        [initialProperties addEntriesFromDictionary:self.initialProperties];
+    }    
 //    if(info != nil){
 //        NSDictionary *infoDic = [BIDObjectToNSDictionary getObjectData: info];
 //        initialProperties[@"user"] = infoDic;
@@ -59,7 +62,7 @@
     
     RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bm.bridge
                                                      moduleName:@"SuryaniRN"
-                                              initialProperties:self.initialProperties];
+                                              initialProperties:initialProperties];
     
     self.view = rootView;
 

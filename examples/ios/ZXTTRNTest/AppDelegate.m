@@ -18,6 +18,7 @@
   [BridgeManage shareInstance].bundleRoot = @"index";
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   ZMRNBaseViewController *rootViewController = [ZMRNBaseViewController new];
+  rootViewController.openBaseRouteBackBtn = false;
   //  rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
