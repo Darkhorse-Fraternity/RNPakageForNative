@@ -231,16 +231,16 @@ PODS:
     - React
   - RNDeviceInfo (2.3.1):
     - React
-  - RNGestureHandler (1.3.0):
+  - RNGestureHandler (1.4.1):
     - React
   - SSZipArchive (2.2.2)
   - Yoga (1.14.0)
   - ZXTTInRN (1.0.0):
-    - CodePush (= 5.7.0)
+    - CodePush (>= 5.7.0)
     - React
 
 DEPENDENCIES:
-  - CodePush (from `../../node_modules/react-native-code-push`)
+  - CodePush (from `../..//node_modules/react-native-code-push`)
   - DoubleConversion (from `../..//node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - FBLazyVector (from `../..//node_modules/react-native/Libraries/FBLazyVector`)
   - FBReactNativeSpec (from `../..//node_modules/react-native/Libraries/FBReactNativeSpec`)
@@ -257,7 +257,7 @@ DEPENDENCIES:
   - React-jsi (from `../..//node_modules/react-native/ReactCommon/jsi`)
   - React-jsiexecutor (from `../..//node_modules/react-native/ReactCommon/jsiexecutor`)
   - React-jsinspector (from `../..//node_modules/react-native/ReactCommon/jsinspector`)
-  - react-native-simple-toast (from `../../node_modules/react-native-simple-toast`)
+  - react-native-simple-toast (from `../..//node_modules/react-native-simple-toast`)
   - React-RCTActionSheet (from `../..//node_modules/react-native/Libraries/ActionSheetIOS`)
   - React-RCTAnimation (from `../..//node_modules/react-native/Libraries/NativeAnimation`)
   - React-RCTBlob (from `../..//node_modules/react-native/Libraries/Blob`)
@@ -269,9 +269,9 @@ DEPENDENCIES:
   - React-RCTVibration (from `../..//node_modules/react-native/Libraries/Vibration`)
   - ReactCommon/jscallinvoker (from `../..//node_modules/react-native/ReactCommon`)
   - ReactCommon/turbomodule/core (from `../..//node_modules/react-native/ReactCommon`)
-  - "RNCAsyncStorage (from `../../node_modules/@react-native-community/async-storage`)"
-  - RNDeviceInfo (from `../../node_modules/react-native-device-info`)
-  - RNGestureHandler (from `../../node_modules/react-native-gesture-handler`)
+  - "RNCAsyncStorage (from `../..//node_modules/@react-native-community/async-storage`)"
+  - RNDeviceInfo (from `../..//node_modules/react-native-device-info`)
+  - RNGestureHandler (from `../..//node_modules/react-native-gesture-handler`)
   - Yoga (from `../..//node_modules/react-native/ReactCommon/yoga`)
   - ZXTTInRN (from `../../iOS`)
 
@@ -284,7 +284,7 @@ SPEC REPOS:
 
 EXTERNAL SOURCES:
   CodePush:
-    :path: "../../node_modules/react-native-code-push"
+    :path: "../..//node_modules/react-native-code-push"
   DoubleConversion:
     :podspec: "../..//node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   FBLazyVector:
@@ -314,7 +314,7 @@ EXTERNAL SOURCES:
   React-jsinspector:
     :path: "../..//node_modules/react-native/ReactCommon/jsinspector"
   react-native-simple-toast:
-    :path: "../../node_modules/react-native-simple-toast"
+    :path: "../..//node_modules/react-native-simple-toast"
   React-RCTActionSheet:
     :path: "../..//node_modules/react-native/Libraries/ActionSheetIOS"
   React-RCTAnimation:
@@ -336,11 +336,11 @@ EXTERNAL SOURCES:
   ReactCommon:
     :path: "../..//node_modules/react-native/ReactCommon"
   RNCAsyncStorage:
-    :path: "../../node_modules/@react-native-community/async-storage"
+    :path: "../..//node_modules/@react-native-community/async-storage"
   RNDeviceInfo:
-    :path: "../../node_modules/react-native-device-info"
+    :path: "../..//node_modules/react-native-device-info"
   RNGestureHandler:
-    :path: "../../node_modules/react-native-gesture-handler"
+    :path: "../..//node_modules/react-native-gesture-handler"
   Yoga:
     :path: "../..//node_modules/react-native/ReactCommon/yoga"
   ZXTTInRN:
@@ -378,10 +378,10 @@ SPEC CHECKSUMS:
   ReactCommon: 4fba5be89efdf0b5720e0adb3d8d7edf6e532db0
   RNCAsyncStorage: 2e2e3feb9bdadc752a026703d8c4065ca912e75a
   RNDeviceInfo: 74ee98a0b3ef57604ea9953f03eca549a9335160
-  RNGestureHandler: 5329a942fce3d41c68b84c2c2276ce06a696d8b0
+  RNGestureHandler: 4cb47a93019c1a201df2644413a0a1569a51c8aa
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
   Yoga: d8c572ddec8d05b7dba08e4e5f1924004a177078
-  ZXTTInRN: ebec50c5dcf1deb9804962c5b14dae0156965399
+  ZXTTInRN: b1b2dd0cc528a09ae92da4ef15fe1b18fd2e1cb9
 
 PODFILE CHECKSUM: dfd73b618a4718610789845ef972c4d7fc31e69a
 

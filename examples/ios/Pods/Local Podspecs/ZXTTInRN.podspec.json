@@ -14,12 +14,15 @@
     "tag": "v1.0.0"
   },
   "source_files": "*.{h,m,mm}",
+  "resources": [
+    "resources/*"
+  ],
   "dependencies": {
     "React": [
 
     ],
     "CodePush": [
-      "5.7.0"
+      ">=5.7.0"
     ]
   }
 }

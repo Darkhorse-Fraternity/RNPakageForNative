@@ -28,7 +28,7 @@ Pod::Spec.new do |s|
   s.platforms              = { :ios => "9.0", :tvos => "9.2" }
   s.source                 = source
   s.source_files           = "*.{h,m,mm}"
-
+  s.resources              = ["resources/*"]
   s.dependency "React"
-  s.dependency "CodePush", "5.7.0"
+  s.dependency "CodePush", ">=5.7.0"
 end

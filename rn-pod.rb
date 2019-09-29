@@ -1,6 +1,8 @@
 def use_rn_pod!(root = ".", config = nil)
 
-    require  root + '/node_modules/@react-native-community/cli-platform-ios/native_modules'
+#    require  root + '/node_modules/@react-native-community/cli-platform-ios/native_modules'
+
+    rootPath = root + '/node_modules/'
 
     pod 'FBLazyVector', :path =>  root + "/node_modules/react-native/Libraries/FBLazyVector"
     pod 'FBReactNativeSpec', :path => root + "/node_modules/react-native/Libraries/FBReactNativeSpec"
@@ -32,6 +34,13 @@ def use_rn_pod!(root = ".", config = nil)
     pod 'DoubleConversion', :podspec => root + '/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
     pod 'glog', :podspec => root + '/node_modules/react-native/third-party-podspecs/glog.podspec'
     pod 'Folly', :podspec => root + '/node_modules/react-native/third-party-podspecs/Folly.podspec'
-
-    use_native_modules!(root,config)
+    pod 'Folly', :podspec => root + '/node_modules/react-native/third-party-podspecs/Folly.podspec'
+    
+    pod 'RNGestureHandler', :path => rootPath + 'react-native-gesture-handler'
+    pod 'RNDeviceInfo', :path => rootPath + 'react-native-device-info'
+    pod 'react-native-simple-toast', :path => rootPath + 'react-native-simple-toast'
+    pod 'RNCAsyncStorage', :path => rootPath + '@react-native-community/async-storage'
+    pod 'CodePush', :path => rootPath + 'react-native-code-push'
+ 
+#    use_native_modules!(root,config)
 end

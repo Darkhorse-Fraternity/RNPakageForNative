@@ -10,7 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
-    "bundle-ios": "react-native bundle --entry-file='./node_modules/zxtt-rn/index.js' --bundle-output='./node_modules/zxtt-rn/main.jsbundle' --dev=false --platform='ios' --assets-dest='./node_modules/zxtt-rn' --verbose"
+    "ios-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./iOS/resources/main.jsbundle' --dev=false --platform='ios' --assets-dest='./iOS/resources' --verbose"
 
   },
   "homepage": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git",
