@@ -34,7 +34,6 @@ def use_rn_pod!(root = ".", config = nil)
     pod 'DoubleConversion', :podspec => root + '/node_modules/react-native/third-party-podspecs/DoubleConversion.podspec'
     pod 'glog', :podspec => root + '/node_modules/react-native/third-party-podspecs/glog.podspec'
     pod 'Folly', :podspec => root + '/node_modules/react-native/third-party-podspecs/Folly.podspec'
-    pod 'Folly', :podspec => root + '/node_modules/react-native/third-party-podspecs/Folly.podspec'
     
     pod 'RNGestureHandler', :path => rootPath + 'react-native-gesture-handler'
     pod 'RNReanimated', :path => rootPath + 'react-native-reanimated'
