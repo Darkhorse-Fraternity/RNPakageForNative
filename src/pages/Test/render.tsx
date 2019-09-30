@@ -4,19 +4,20 @@ import {useNavigation} from 'react-navigation-hooks'
 
 
 interface PageItemType {
-  pageName: string
+  pageName: string,
+  title: string
 }
 
 
 const PageItem = (props:PageItemType)=> {
-  const {pageName} = props
+  const {pageName,title} = props
   const { navigate } = useNavigation();
   return (
     <StyledBtn onPress={()=>{
       navigate(pageName);         
     }}>
       <StyledText>
-        测试页面2
+        {title}
       </StyledText>
       <StyledArrow/>
     </StyledBtn>
@@ -28,7 +29,8 @@ const render = () => {
   // 使用 useCallback 将PageItem转为记忆函数提高性能。
   return (   
     <StyledContent >
-       {useCallback(<PageItem pageName="test2"/>,["pageName"])}
+       {useCallback(<PageItem pageName="test2" title="测试页面"/>,["pageName"])}
+       {useCallback(<PageItem pageName="richText" title="富文本"/>,["pageName"])}
     </StyledContent>
     );
 };

@@ -1,11 +1,10 @@
 import React, {lazy} from 'react';
 import {Text} from 'react-native';
-
 // import render from './render'
 import {toLazyExoticComponent} from '../toLazyExoticComponent'
 const render = lazy(() => import('./render'));
 
-const title = '测试List';
+const title = '富文本';
 
 const navigationOptions = (props: any) => ({
   title: title,
