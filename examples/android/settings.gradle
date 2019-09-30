@@ -1,3 +1,11 @@
 rootProject.name = 'ZXTTRNTest'
 apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings,"../..")
+//apply from: file("../../Android/build.gradle");
+
+include ':zxtt-rn'
+project(':zxtt-rn').projectDir = new File('../../Android/zxtt-rn')
+
+
 include ':app'
+
+
