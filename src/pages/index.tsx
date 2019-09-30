@@ -28,7 +28,7 @@ const stackDefoultConfig:CreateNavigatorConfig = {
 
 // const initialRouteName = 'findDesigner';
 
-export function creactAppContainer(initialRouteName: string = "testPage",openBaseRouteBackBtn:boolean = false ) {
+export function creactAppContainer(initialRouteName: string = "testPage",openBaseRouteBackBtn:boolean = true ) {
    // 如果页面headerLeft要重写 则从这边进行判断。
   const  initialRoute = baseRoute[initialRouteName];
   initialRoute.screenProps={openBaseRouteBackBtn}

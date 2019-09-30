@@ -4,7 +4,7 @@ require_relative  '../../rn-pod'
 target 'ZXTTRNTest' do
   # Pods for ZXTTRNTest
   pod 'ZXTTInRN', :path =>  '../../iOS'
-  use_rn_pod!('../../')
+  use_rn_pod!('../..')
 
   target 'ZXTTRNTestTests' do
     inherit! :search_paths

@@ -25,8 +25,8 @@ static BridgeManage *_singleInstance = nil;
     dispatch_once(&onceToken, ^{
         if (_singleInstance == nil) {
             _singleInstance = [[self alloc]init];
-             _singleInstance.bundleRoot = @"node_modules/zxtt-rn/index";
-//            _singleInstance.bundleRoot = @"index";
+//             _singleInstance.bundleRoot = @"node_modules/zxtt-rn/index";
+            _singleInstance.bundleRoot = @"index";
            
            
         }
