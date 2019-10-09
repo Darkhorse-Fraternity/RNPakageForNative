@@ -1,6 +1,21 @@
 rootProject.name = 'ZXTTRNTest'
-apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings,"../..")
+
+//apply from: file("../../node_modules/@react-native-community/cli-platform-android/native_modules.gradle"); applyNativeModulesSettingsGradle(settings,"../..")
 //apply from: file("../../Android/build.gradle");
+
+
+include ':@react-native-community_async-storage'
+project(':@react-native-community_async-storage').projectDir = new File('../../node_modules/@react-native-community/async-storage/android')
+include ':react-native-device-info'
+project(':react-native-device-info').projectDir = new File('../../node_modules/react-native-device-info/android')
+include ':react-native-gesture-handler'
+project(':react-native-gesture-handler').projectDir = new File('../../node_modules/react-native-gesture-handler/android')
+include ':react-native-reanimated'
+project(':react-native-reanimated').projectDir = new File('../../node_modules/react-native-reanimated/android')
+include ':react-native-screens'
+project(':react-native-screens').projectDir = new File('../../node_modules/react-native-screens/android')
+include ':react-native-code-push'
+project(':react-native-code-push').projectDir = new File('../../node_modules/react-native-code-push/android/app')
 
 include ':zxtt-rn'
 project(':zxtt-rn').projectDir = new File('../../Android/zxtt-rn')
