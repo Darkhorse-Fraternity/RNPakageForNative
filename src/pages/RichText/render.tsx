@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {StyledContent,StyledBtn,StyledText} from './style'
-import {Text, ScrollView} from 'react-native'
+import {Text, ScrollView,View} from 'react-native'
 import HTMLView from 'react-native-htmlview';
 import {StyleSheet} from 'react-native';
 import {richTextString} from './richTextSring'
@@ -9,13 +9,9 @@ import {richTextString} from './richTextSring'
 
 
 function renderNode(node, index, siblings, parent, defaultRenderer) {
-  if (node.name == 'body') {
+  if (node.name == 'div') {
       const specialSyle = node.attribs.style
-      return (
-        <>
-          {defaultRenderer(node.children, parent)}
-        </>
-      )
+      return defaultRenderer(node.children, parent)
     }
 }
 
@@ -38,6 +34,8 @@ const render = () => {
     nodeComponentProps={{overflow: 'hidden'}}
     value={richTextString} 
     renderNode={renderNode} 
+    removeClippedSubviews
+    rootComponentProps={{removeClippedSubviews:true}}
     RootComponent={renderRootComponent} />
    );
 };
