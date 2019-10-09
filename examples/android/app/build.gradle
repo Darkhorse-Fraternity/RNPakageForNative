@@ -187,7 +187,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation project(':zxtt-rn')
-
+//    implementation 'com.jaeger.statusbarutil:library:1.5.1'
 
 }
 

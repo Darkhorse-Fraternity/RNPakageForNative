@@ -1,4 +1,5 @@
 import React,{ PureComponent } from 'react';
+import {StatusBar} from 'react-native'
 import { ThemeProvider } from 'styled-components';
 import theme from '../theme';
 import  {creactAppContainer}  from './pages';
@@ -33,6 +34,7 @@ const AppView = (props: PropsApp)=>{
   const AppContainer = creactAppContainer(initialRouteName, openBaseRouteBackBtn)
   return (
     <ThemeProvider theme={theme}>
+      <StatusBar backgroundColor="white" barStyle="dark-content" />
       <AppContainer/>
     </ThemeProvider>
   );
