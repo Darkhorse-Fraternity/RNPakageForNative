@@ -27,8 +27,9 @@ import com.swmansion.rnscreens.RNScreensPackage;
 public class PackageList {
     private Application application;
     private ReactNativeHost reactNativeHost;
-    public PackageList(ReactNativeHost reactNativeHost) {
+    public PackageList(ReactNativeHost reactNativeHost, Application application) {
         this.reactNativeHost = reactNativeHost;
+        this.application = application;
     }
 
     public PackageList(Application application) {
@@ -44,14 +45,15 @@ public class PackageList {
 //        return this.getApplication().getResources();
 //    }
 
-//    private Application getApplication() {
+    private Application getApplication() {
 //        if (this.reactNativeHost == null) return this.application;
 //        return this.reactNativeHost.getApplication();
-//    }
+        return this.application;
+    }
 //
-//    private Context getApplicationContext() {
-//        return this.getApplication().getApplicationContext();
-//    }
+    private Context getApplicationContext() {
+        return this.getApplication().getApplicationContext();
+    }
 
     public ArrayList<ReactPackage> getPackages() {
         return new ArrayList<>(Arrays.<ReactPackage>asList(
@@ -59,6 +61,7 @@ public class PackageList {
                 new RNGestureHandlerPackage(),
                 new RNDeviceInfo(),
 //                new CodePush(BuildConfig.CODEPUSH_KEY,getApplicationContext(),BuildConfig.DEBUG),
+                new CodePush("",getApplicationContext(),BuildConfig.DEBUG),
                 new AsyncStoragePackage(),
                 new ReanimatedPackage(),
                 new RNScreensPackage()

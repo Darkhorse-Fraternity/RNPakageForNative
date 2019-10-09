@@ -14,7 +14,7 @@ public class RNApplication {
 
     public static  ReactNativeHost reactNativeHost;
 
-    public static ReactNativeHost getReactNativeHost(Application app) {
+    public static ReactNativeHost getReactNativeHost(final Application app) {
         return new ReactNativeHost(app) {
             @Override
             public boolean getUseDeveloperSupport() {
@@ -24,7 +24,7 @@ public class RNApplication {
             @Override
             protected List<ReactPackage> getPackages() {
                 @SuppressWarnings("UnnecessaryLocalVariable")
-                List<ReactPackage> packages = new PackageList(this).getPackages();
+                List<ReactPackage> packages = new PackageList(this,app).getPackages();
                 // Packages that cannot be autolinked yet can be added manually here, for example:
                 // packages.add(new MyReactNativePackage());
                 return packages;
