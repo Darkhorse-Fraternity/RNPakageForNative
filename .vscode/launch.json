@@ -13,6 +13,7 @@
             "runArguments": [
                 "--root", "./examples/"
             ],
+           
             
         },
         {
@@ -22,8 +23,9 @@
             "request": "launch",
             "platform": "ios",
             "runArguments": [
-                "--project-path", "./examples/ios"
-            ]
+                "--project-path", "./examples/ios",
+            ],
+            "iosRelativeProjectPath": "examples/ios"
         },
         {
             "type": "node",
