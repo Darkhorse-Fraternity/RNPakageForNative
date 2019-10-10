@@ -11,7 +11,8 @@ import {richTextString} from './richTextSring'
 function renderNode(node, index, siblings, parent, defaultRenderer) {
   if (node.name == 'div') {
       const specialSyle = node.attribs.style
-      return defaultRenderer(node.children, parent)
+      return 
+        defaultRenderer(node.children, parent)
     }
 }
 
@@ -32,9 +33,11 @@ const render = () => {
     <HTMLView 
     textComponentProps={{overflow: 'hidden'}}
     nodeComponentProps={{overflow: 'hidden'}}
+    style={{marginBottom:20}}
     value={richTextString} 
     renderNode={renderNode} 
     removeClippedSubviews
+    stylesheet={styles}
     rootComponentProps={{removeClippedSubviews:true}}
     RootComponent={renderRootComponent} />
    );
@@ -47,6 +50,13 @@ const styles = StyleSheet.create({
     fontWeight: '300',
     color: '#FF3366', // make links coloured pink
   },
+  p:{
+    fontSize:17,
+  },
+  img:{
+    width:100,
+    height:100,
+  }
 });
 
 

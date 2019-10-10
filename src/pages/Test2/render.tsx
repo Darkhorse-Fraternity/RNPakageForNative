@@ -1,7 +1,6 @@
 import React,{useState} from 'react';
 import {StyledContent,StyledBtn,StyledText} from './style'
 
-
 const render = () => {
 
   const [value, setValue] = useState(0);
