@@ -183,14 +183,20 @@ android {
 //    sourceSets {
 //        main.java.srcDirs += 'src/main/<YOUR DIRECTORY>'
 //    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
 }
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation project(':zxtt-rn')
 //    implementation files("../../../Android/zxtt-rn/build/outputs/aar/zxtt-rn-debug.aar")
 //    implementation 'com.jaeger.statusbarutil:library:1.5.1'
-//    api files("libs/zxtt-rn-debug.aar")
+//    api files("libs/zxtt-rn-debug1.aar")
 
 }
 
