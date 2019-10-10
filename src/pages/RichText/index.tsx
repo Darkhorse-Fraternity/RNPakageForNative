@@ -1,11 +1,17 @@
 import React, {lazy} from 'react';
 import {Text} from 'react-native';
 
+
+// console.log('Image.props.defaultSource', Image);
+
+// Image.propTypes.defaultSource = require('../../../source/img/default/placehold.png');
+
+// console.log('Image.propTypes.defaultSource', Image.propTypes.defaultSource);
 // import render from './render'
 import {toLazyExoticComponent} from '../toLazyExoticComponent'
 const render = lazy(() => import('./render'));
 
-const title = '测试List';
+const title = '富文本';
 
 const navigationOptions = (props: any) => ({
   title: title,

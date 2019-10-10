@@ -3,6 +3,9 @@ require_relative  '../../rn-pod'
 
 target 'ZXTTRNTest' do
   # Pods for ZXTTRNTest
+  
+#   pod 'LookinServer', :configurations => ['Debug']
+  pod 'LookinServer'
   pod 'ZXTTInRN', :path =>  '../../iOS'
   use_rn_pod!('../..')
 

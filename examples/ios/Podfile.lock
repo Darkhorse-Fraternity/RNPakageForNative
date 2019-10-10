@@ -27,6 +27,7 @@ PODS:
   - glog (0.3.5)
   - JWT (3.0.0-beta.11):
     - Base64 (~> 1.1.2)
+  - LookinServer (0.9.4)
   - RCTRequired (0.61.1)
   - RCTTypeSafety (0.61.1):
     - FBLazyVector (= 0.61.1)
@@ -250,6 +251,7 @@ DEPENDENCIES:
   - FBReactNativeSpec (from `../../node_modules/react-native/Libraries/FBReactNativeSpec`)
   - Folly (from `../../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../../node_modules/react-native/third-party-podspecs/glog.podspec`)
+  - LookinServer
   - RCTRequired (from `../../node_modules/react-native/Libraries/RCTRequired`)
   - RCTTypeSafety (from `../../node_modules/react-native/Libraries/TypeSafety`)
   - React (from `../../node_modules/react-native/`)
@@ -286,6 +288,7 @@ SPEC REPOS:
     - Base64
     - boost-for-react-native
     - JWT
+    - LookinServer
     - SSZipArchive
 
 EXTERNAL SOURCES:
@@ -366,6 +369,7 @@ SPEC CHECKSUMS:
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   JWT: 05028b9624591bba9681bb57df2c5f95fa258bad
+  LookinServer: 54eb99921647bda4068ff8776d842285e2bf0adb
   RCTRequired: 53825815218847d3e9c7b6d92ad2d197a926d51e
   RCTTypeSafety: d886540c518e53064dfa081bf7693fd650699b92
   React: 5dea58967c421bd1fdf6b94c18b9ed0f5134683c
@@ -395,6 +399,6 @@ SPEC CHECKSUMS:
   Yoga: d8c572ddec8d05b7dba08e4e5f1924004a177078
   ZXTTInRN: b1b2dd0cc528a09ae92da4ef15fe1b18fd2e1cb9
 
-PODFILE CHECKSUM: 08e6061e03c32d179c1dd9d124e556a98e7cc368
+PODFILE CHECKSUM: dc0f128c940bddbc25c75daa5eba972feffee9f1
 
 COCOAPODS: 1.7.5
