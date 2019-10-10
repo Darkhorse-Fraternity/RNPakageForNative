@@ -2,27 +2,30 @@ package com.zxttrntest;
 
 import android.app.Application;
 import android.content.Context;
-import com.facebook.react.ReactApplication;
-import com.facebook.react.ReactNativeHost;
-import com.facebook.react.ReactPackage;
-import com.facebook.soloader.SoLoader;
+//import com.facebook.react.ReactApplication;
+//import com.facebook.react.ReactNativeHost;
+//import com.facebook.react.ReactPackage;
+//import com.facebook.soloader.SoLoader;
+//import com.qeeka.zxtt_rn.RNApplication;
+
 import com.qeeka.zxtt_rn.RNApplication;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 
-public class MainApplication extends Application implements ReactApplication {
+public class MainApplication extends RNApplication {
 
-
-  @Override
-  public ReactNativeHost getReactNativeHost() {
-    return RNApplication.getReactNativeHost(this);
-  }
+//
+//  @Override
+//  public ReactNativeHost getReactNativeHost() {
+//    return RNApplication.getReactNativeHost(this);
+//  }
 
   @Override
   public void onCreate() {
     super.onCreate();
-    SoLoader.init(this, /* native exopackage */ false);
+    //RNApplication.getReactNativeHost(this);
+//    SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
   }
 
