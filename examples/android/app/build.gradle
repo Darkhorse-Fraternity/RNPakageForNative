@@ -71,14 +71,15 @@ import com.android.build.OutputFile
  *   nodeExecutableAndArgs: ["node"],
  *
  *   // supply additional arguments to the packager
- *   extraPackagerArgs: []
+ *   extraPackagerArgs: []s
  * ]
  */
 
 project.ext.react = [
     entryFile: "index.js",
     enableHermes: true,  // clean and rebuild if changing
-    root:'../../../'
+    root:'../../../',
+    hermesCommand:'../../../node_modules/hermes-engine/%OS-BIN%/hermes'
 ]
 
 apply from: "../../../node_modules/react-native/react.gradle"
@@ -186,8 +187,10 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation project(':zxtt-rn')
+//    implementation project(':zxtt-rn')
+    implementation files("../../../Android/zxtt-rn/build/outputs/aar/zxtt-rn-debug.aar")
 //    implementation 'com.jaeger.statusbarutil:library:1.5.1'
+//    api files("libs/zxtt-rn-debug.aar")
 
 }
 
