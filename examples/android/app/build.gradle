@@ -194,8 +194,11 @@ dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
     implementation "com.facebook.react:react-native:+"
-//    implementation project(':zxtt-rn')
-    debugImplementation files("../../../Android/zxtt-rn/build/outputs/aar/zxtt-rn-debug.aar")
+    def hermesPath = "../../../node_modules/hermes-engine/android/";
+    debugImplementation files(hermesPath + "hermes-debug.aar")
+    releaseImplementation files(hermesPath + "hermes-release.aar")
+    implementation project(':zxtt-rn')
+//    debugImplementation files("../../../Android/zxtt-rn/build/outputs/aar/zxtt-rn-debug.aar")
 //    implementation 'com.jaeger.statusbarutil:library:1.5.1'
 //    debugImplementation files("libs/zxtt-rn-debug1.aar")
 
