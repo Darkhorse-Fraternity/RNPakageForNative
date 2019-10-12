@@ -75,14 +75,20 @@ import com.android.build.OutputFile
  * ]
  */
 
-project.ext.react = [
-    entryFile: "index.js",
-    enableHermes: true,  // clean and rebuild if changing
-    root:'../../../',
-    hermesCommand:'../../../node_modules/hermes-engine/%OS-BIN%/hermes'
-]
 
-apply from: "../../../node_modules/react-native/react.gradle"
+def useLocalConfig = false;
+if(useLocalConfig){
+    project.ext.react = [
+            entryFile: "index.js",
+            enableHermes: true,  // clean and rebuild if changing
+            root:'../../../',
+            hermesCommand:'../../../node_modules/hermes-engine/%OS-BIN%/hermes'
+    ]
+
+    apply from: "../../../node_modules/react-native/react.gradle"
+}
+
+
 
 /**
  * Set this to true to create two separate APKs instead of one:
@@ -193,15 +199,7 @@ android {
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
     implementation 'androidx.appcompat:appcompat:1.1.0'
-//    implementation "com.facebook.react:react-native:+"
-//    def hermesPath = "../../../node_modules/hermes-engine/android/";
-//    debugImplementation files(hermesPath + "hermes-debug.aar")
-//    releaseImplementation files(hermesPath + "hermes-release.aar")
     implementation project(':zxtt-rn-exa')
-//    debugImplementation files("../../../Android/zxtt-rn/build/outputs/aar/zxtt-rn-debug.aar")
-//    implementation 'com.jaeger.statusbarutil:library:1.5.1'
-//    debugImplementation files("libs/zxtt-rn-debug1.aar")
-
 }
 
 

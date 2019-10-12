@@ -38,7 +38,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
 def enableHermes = true
-def enableUseLibs= "$project.name" != 'zxtt-rn-exa'
+def enableUseLibs= "$project.name" != 'zxtt-rn-exa' || true
 //repositories {
 //    maven {
 //        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -125,4 +125,4 @@ if(!enableUseLibs){
     //自动加载本地库。
     applyNativeModulesAppBuildGradle(project,"../..")
 }
-applyNativeModulesAppBuildPackageList("../..")
+//applyNativeModulesAppBuildPackageList(project, "../..")

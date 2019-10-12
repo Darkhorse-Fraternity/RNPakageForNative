@@ -229,9 +229,12 @@ ext.applyNativeModulesSettingsGradle = { DefaultSettings defaultSettings, String
 
 ext.applyNativeModulesAppBuildGradle = { Project project, String root = ".." ->
   autoModules.applyBuildGradle(project, root)
+  autoModules.addReactNativeModuleDependencies()
 }
 
-ext.applyNativeModulesAppBuildPackageList = {String root = ".." ->
+ext.applyNativeModulesAppBuildPackageList = { Project project, String root = ".." ->
+
+  autoModules.applyBuildGradle(project, root)
 
   def generatedSrcDir = new File(buildDir, "generated/rncli/src/main/java")
   def generatedCodeDir = new File(generatedSrcDir, generatedFilePackage.replace('.', '/'))
