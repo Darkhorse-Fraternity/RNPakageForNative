@@ -13,6 +13,7 @@ import androidx.annotation.Nullable;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.facebook.react.ReactActivityDelegate;
 import com.qeeka.zxtt_rn.RNActivity;
 
 //import com.qeeka.zxtt_rn.RNActivity;
@@ -24,11 +25,14 @@ public class MainActivity extends RNActivity {
    * rendering of the component.
    */
 
-//  @Override
-//  protected void onCreate(@Nullable Bundle savedInstanceState) {
-//    super.onCreate(savedInstanceState);
-//    setContentView(R.layout.activity_main);
-//
-//    startActivity(new Intent(this, RNActivity.class));
-//  }
+  @Override
+  protected ReactActivityDelegate createReactActivityDelegate() {
+      return new ReactActivityDelegate(this, getMainComponentName()) {
+          @Nullable
+          @Override
+          protected Bundle getLaunchOptions() {
+              return new Bundle();
+          }
+      };
+  }
 }
