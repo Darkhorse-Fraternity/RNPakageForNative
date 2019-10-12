@@ -36,20 +36,27 @@
 暂无
 
 ### RN开发第三方组件配置说明
-我们不使用rn0.60之后的自动配置,因为这会对原生项目造成侵入，所以这边说明如何进行添加
+iOS不使用rn0.60之后的自动配置,因为这会对原生项目造成侵入，而安卓继续沿用。
+
 ### npm
 这边还是一样,通过npm add xxx 添加组件， 这里推荐使用[YARN](https://www.baidu.com/link?url=OZPDrLVCg4dnBsO1aTf_w8z-smPA3r6LG_SWU2BR5wLmH1kRg10P5_RYcd7qFZ72&wd=&eqid=e8bd0a2700d3f4c0000000065da14cb0) 来替代[NPM](https://docs.npmjs.com/)
 
 #### iOS
+在zxtt-rn根目录的rn-pod.rb上手动添加依赖
 
 #### Android
+无
 
 
 
-### zxtt 测试
+### ZXTT-RN 测试
 #### iOS
 `react-native run-ios --project-path ./examples/ios`
 
 #### Android
 
 `react-native run-android --root './examples/' --variant debug`
+
+
+### 发布前运行
+`rn-deploy` 
