@@ -17,8 +17,8 @@ apply from: file("../../node_modules/@react-native-community/cli-platform-androi
 //include ':react-native-code-push'
 //project(':react-native-code-push').projectDir = new File('../../node_modules/react-native-code-push/android/app')
 
-include ':zxtt-rn'
-project(':zxtt-rn').projectDir = new File('../../Android/zxtt-rn')
+include ':zxtt-rn-exa'
+project(':zxtt-rn-exa').projectDir = new File('../../Android/zxtt-rn')
 
 
 include ':app'

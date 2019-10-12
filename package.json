@@ -11,7 +11,7 @@
     "test": "jest",
     "lint": "eslint .",
     "ios-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./iOS/resources/main.jsbundle' --dev=false --platform='ios' --assets-dest='./iOS/resources' --verbose",
-    "android-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./Android/zxtt-rn/src/main/res/assets/index.android.bundle' --dev=false --platform='android' --assets-dest='./Android/zxtt-rn/src/main/res' --verbose"
+    "android-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./Android/zxtt-rn/src/main/assets/index.android.bundle' --dev=false --platform='android' --assets-dest='./Android/zxtt-rn/src/main/res/' --verbose"
   },
   "homepage": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git",
   "license": "MIT",

@@ -37,8 +37,8 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * on project.ext.react, JavaScript will not be compiled to Hermes Bytecode
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
-//def enableHermes = true
-def enableUseLibs= false
+def enableHermes = true
+def enableUseLibs= "$project.name" != 'zxtt-rn-exa'
 //repositories {
 //    maven {
 //        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -107,32 +107,20 @@ dependencies {
     api 'androidx.appcompat:appcompat:1.1.0-rc01'
     api 'androidx.swiperefreshlayout:swiperefreshlayout:1.1.0-alpha02'
 
-//    def dir = new File('./libs')
-//    dir.traverse(
-//            nameFilter: ~/.*\.aar/
-//    ) { file ->
-//        def name = file.getName().replace('.aar', '')
-//        implementation(name: name, ext: 'aar')
-//    }
-//    implementation(name: 'react-native-device-info-debug', ext: 'aar')
-//    implementation(name: '@react-native-community_async-storage-debug', ext: 'aar')
-//    implementation(name: 'react-native-code-push-debug', ext: 'aar')
-//    implementation(name: 'react-native-gesture-handler-debug', ext: 'aar')
-//    implementation(name: 'react-native-reanimated-debug', ext: 'aar')
-//    implementation(name: 'react-native-screens-debug', ext: 'aar')
-//    debugImplementation files("libs/react-native-device-info-debug.aar")
-//    api files("../../node_modules/react-native-device-info/android/build/outputs/aar/react-native-device-info-debug.aar")
+    if (enableHermes) {
+        def hermesPath = "../../node_modules/hermes-engine/android/";
+        if(enableUseLibs){
+            //在主工程中 rn 只用release
+            implementation files(hermesPath + "hermes-release.aar")
+        }else {
+            debugImplementation files(hermesPath + "hermes-debug.aar")
+            releaseImplementation files(hermesPath + "hermes-release.aar")
+        }
 
 
-
-//    debugImplementation files('../../node_modules/react-native-device-info/async-storage/android/app/build/outputs/aar/react-native-device-info-debug.aar')
-//    if (enableHermes) {
-//        def hermesPath = "../../node_modules/hermes-engine/android/";
-//        debugImplementation files(hermesPath + "hermes-debug.aar")
-//        releaseImplementation files(hermesPath + "hermes-release.aar")
-//    } else {
-//        implementation jscFlavor
-//    }
+    } else {
+        implementation jscFlavor
+    }
 
 }
 
