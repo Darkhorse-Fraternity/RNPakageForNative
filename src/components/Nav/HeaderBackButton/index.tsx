@@ -49,7 +49,7 @@ export const NativeBackButton = (props:PropType) => {
     <BackButton
       {...props}
       onPress={() => {
-        RouterBridge.pop(true);
+        RouterBridge && RouterBridge.pop(true);
       }}
     />,
     [props],

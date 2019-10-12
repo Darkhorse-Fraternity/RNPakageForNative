@@ -35,7 +35,7 @@ export function creactAppContainer(initialRouteName: string = "testPage",openBas
   if(openBaseRouteBackBtn){
     //是否开启返回按钮
     initialRoute.navigationOptions = {
-      headerLeft:(<NativeBackButton color={defaultNavigationOptions.headerTintColor}/>)
+      headerLeft:(<NativeBackButton color={defaultNavigationOptions.headerTintColor} style={{marginLeft: 30}}/>)
     };
   }
  
