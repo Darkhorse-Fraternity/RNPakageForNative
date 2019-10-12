@@ -6,25 +6,26 @@ import android.content.Context;
 //import com.facebook.react.ReactNativeHost;
 //import com.facebook.react.ReactPackage;
 //import com.facebook.soloader.SoLoader;
-//import com.qeeka.zxtt_rn.RNApplication;
+//import com.qeeka.zxtt_rn.RNManager;
 
-import com.qeeka.zxtt_rn.RNApplication;
+import com.facebook.react.ReactApplication;
+import com.facebook.react.ReactNativeHost;
+import com.qeeka.zxtt_rn.RNManager;
 
 import java.lang.reflect.InvocationTargetException;
-import java.util.List;
 
-public class MainApplication extends RNApplication {
+public class MainApplication extends Application implements ReactApplication {
 
 //
 //  @Override
 //  public ReactNativeHost getReactNativeHost() {
-//    return RNApplication.getReactNativeHost(this);
+//    return RNManager.getReactNativeHost(this);
 //  }
 
   @Override
   public void onCreate() {
     super.onCreate();
-    //RNApplication.getReactNativeHost(this);
+//    RNManager.init(this);
 //    SoLoader.init(this, /* native exopackage */ false);
     initializeFlipper(this); // Remove this line if you don't want Flipper enabled
   }
@@ -53,5 +54,10 @@ public class MainApplication extends RNApplication {
         e.printStackTrace();
       }
     }
+  }
+
+  @Override
+  public ReactNativeHost getReactNativeHost() {
+    return RNManager.getReactNativeHost(this);
   }
 }
