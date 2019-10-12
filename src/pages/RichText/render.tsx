@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import {StyledContent,StyledBtn,StyledText} from './style'
-import {Text, ScrollView,View} from 'react-native'
+import {View, ScrollView,Image} from 'react-native'
 import HTMLView from 'react-native-htmlview';
 import {StyleSheet} from 'react-native';
 import {richTextString} from './richTextSring'
@@ -38,8 +38,10 @@ const render = () => {
     renderNode={renderNode} 
     removeClippedSubviews
     stylesheet={styles}
+    NodeComponent={View}
     rootComponentProps={{removeClippedSubviews:true}}
     RootComponent={renderRootComponent} />
+   
    );
 };
 
@@ -52,10 +54,6 @@ const styles = StyleSheet.create({
   },
   p:{
     fontSize:17,
-  },
-  img:{
-    width:100,
-    height:100,
   }
 });
 
