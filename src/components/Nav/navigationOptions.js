@@ -6,7 +6,7 @@ import {Platform, StatusBar} from 'react-native';
 
 import React from 'react';
 // import { strings } from '../../../../locales/i18n';
-import {HeaderBackImage2} from './HeaderBackButton';
+import {HeaderBackImage} from './HeaderBackButton';
 
 export const defaultNavigationOptions = {
   headerStyle: {
@@ -30,7 +30,7 @@ export const defaultNavigationOptions = {
     fontWeight: '300',
   },
   // headerBackImage: require('../../source/img/bar/back-icon.png'),
-  headerBackImage: <HeaderBackImage2 style={{margin: 15}} />,
+  headerBackImage: <HeaderBackImage style={{margin: 15}} />,
   headerBackTitle: null,
   gesturesEnabled: true,
 };
