@@ -38,7 +38,7 @@ const render = () => {
     renderNode={renderNode} 
     removeClippedSubviews
     stylesheet={styles}
-    NodeComponent={View}
+    NodeComponent={element => <View {...element} />}
     rootComponentProps={{removeClippedSubviews:true}}
     RootComponent={renderRootComponent} />
    

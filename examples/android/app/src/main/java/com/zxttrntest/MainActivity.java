@@ -31,7 +31,10 @@ public class MainActivity extends RNActivity {
           @Nullable
           @Override
           protected Bundle getLaunchOptions() {
-              return new Bundle();
+              Bundle bundle=new Bundle();
+              //往bundle中添加启动属性键值对
+              bundle.putBoolean("openBaseRouteBackBtn", false );
+              return bundle;
           }
       };
   }
