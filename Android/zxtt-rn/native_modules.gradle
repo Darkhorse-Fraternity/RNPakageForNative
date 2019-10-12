@@ -141,7 +141,7 @@ class ReactNativeModules {
     String packageClassInstances = ""
 
     if (packages.size() > 0) {
-      packageImports = "import ${packageName}.BuildConfig;\nimport ${packageName}.R;\n\n"
+//      packageImports = "import ${packageName}.BuildConfig;\nimport ${packageName}.R;\n\n"
       packageImports = packageImports + packages.collect {
         "// ${it.name}\n${it.packageImportPath}"
       }.join('\n')

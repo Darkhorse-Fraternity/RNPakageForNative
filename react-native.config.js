@@ -7,14 +7,14 @@ module.exports = {
       platforms: {
         android: {
           packageInstance:
-            'new CodePush(BuildConfig.CODEPUSH_KEY,getApplicationContext(),BuildConfig.DEBUG)',
+            'new CodePush("",getApplicationContext(),BuildConfig.DEBUG)',
         },
       },
-    }
+    },
   },
   project: {
-      android: {
-        sourceDir: 'examples/android'
-      }
+    android: {
+      sourceDir: 'examples/android',
+    },
   },
 };

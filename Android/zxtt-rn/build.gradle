@@ -98,13 +98,6 @@ dependencies {
         implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
     }else{
         implementation fileTree(dir: 'libs', include: ['*.jar'])
-//        implementation project(':@react-native-community_async-storage')
-//        implementation project(':react-native-device-info')
-//        implementation project(':react-native-gesture-handler')
-//        implementation project(':react-native-reanimated')
-//        implementation project(':react-native-screens')
-//        implementation project(':react-native-code-push')
-
         if (enableHermes) {
             def hermesPath = "../../node_modules/hermes-engine/android/";
             debugImplementation files(hermesPath + "hermes-debug.aar")
@@ -132,4 +125,4 @@ if(!enableUseLibs){
     //自动加载本地库。
     applyNativeModulesAppBuildGradle(project,"../..")
 }
-//applyNativeModulesAppBuildPackageList("../..")
+applyNativeModulesAppBuildPackageList("../..")
