@@ -1,9 +1,5 @@
 apply plugin: 'com.android.library'
-apply plugin: 'maven'
 
-group = 'myGroup'
-// artifactId is taken by default, from folder name
-version = '0.1-SNAPSHOT'
 
 
 /**
@@ -42,7 +38,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
 def enableHermes = true
-def enableUseLibs= "$project.name" != 'zxtt-rn-exa'
+def enableUseLibs= "$project.name" != 'zxtt-rn-exa' || true
 //repositories {
 //    maven {
 //        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -118,7 +114,6 @@ dependencies {
             implementation jscFlavor
         }
     }
-    implementation 'commons-lang:commons-lang:2.3'
 }
 
 // Run this once to be able to run the application with BUCK
@@ -131,12 +126,10 @@ task copyDownloadableDepsToLibs(type: Copy) {
 //apply from: "../../node_modules/react-native/react.gradle"
 
 
-apply from: file("./native_modules.gradle");
+
 
 if(!enableUseLibs){
+    apply from: file("./native_modules.gradle");
     //自动加载本地库。
     applyNativeModulesAppBuildGradle(project,"../..")
-//    applyNativeModulesAppBuildPackageList(project, "../..")
 }
-
-//applyNativeModulesAppBuildPackageListRelease()

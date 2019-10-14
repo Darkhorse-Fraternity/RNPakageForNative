@@ -230,12 +230,8 @@ ext.applyNativeModulesSettingsGradle = { DefaultSettings defaultSettings, String
 ext.applyNativeModulesAppBuildGradle = { Project project, String root = ".." ->
   autoModules.applyBuildGradle(project, root)
   autoModules.addReactNativeModuleDependencies()
-}
 
-
-ext.applyNativeModulesAppBuildPackageList = { Project project, String root = ".." ->
-  autoModules.applyBuildGradle(project, root)
-  def generatedSrcDir = new File(buildDir, "generated/rncli/src/main/java")
+  def generatedSrcDir = new File(buildDir, "../src/main/java")
   def generatedCodeDir = new File(generatedSrcDir, generatedFilePackage.replace('.', '/'))
 
   task generatePackageList {
@@ -245,38 +241,23 @@ ext.applyNativeModulesAppBuildPackageList = { Project project, String root = "..
   }
 
   preBuild.dependsOn generatePackageList
-
-  android {
-    sourceSets {
-      main {
-        java {
-          srcDirs += generatedSrcDir
-        }
-      }
-    }
-  }
 }
 
 
-ext.applyNativeModulesAppBuildPackageListRelease = {  ->
-  def generatedSrcDir = new File(buildDir, "generated/rncli/src/main/java")
-
-
-//  task generatePackageList {
-//    doLast {
-//      autoModules.generatePackagesFile(generatedCodeDir, generatedFileName, generatedFileContentsTemplate)
-//    }
-//  }
+//ext.applyNativeModulesAppBuildPackageList = { Project project, String root = ".." ->
+//  autoModules.applyBuildGradle(project, root)
+////  def generatedSrcDir = new File(buildDir, "generated/rncli/src/main/java")
 //
-//  preBuild.dependsOn generatePackageList
+//
+////  android {
+////    sourceSets {
+////      main {
+////        java {
+////          srcDirs += generatedSrcDir
+////        }
+////      }
+////    }
+////  }
+//}
 
-  android {
-    sourceSets {
-      main {
-        java {
-          srcDirs += generatedSrcDir
-        }
-      }
-    }
-  }
-}
+
