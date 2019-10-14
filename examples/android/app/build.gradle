@@ -76,7 +76,7 @@ import com.android.build.OutputFile
  */
 
 
-def useLocalConfig = false;
+def useLocalConfig = false
 if(useLocalConfig){
     project.ext.react = [
             entryFile: "index.js",
