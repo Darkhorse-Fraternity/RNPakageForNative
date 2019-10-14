@@ -38,7 +38,7 @@ def jscFlavor = 'org.webkit:android-jsc:+'
  * and the benefits of using Hermes will therefore be sharply reduced.
  */
 def enableHermes = true
-def enableUseLibs= "$project.name" != 'zxtt-rn-exa' || true
+def enableUseLibs= "$project.name" != 'zxtt-rn-exa'
 //repositories {
 //    maven {
 //        // All of React Native (JS, Obj-C sources, Android binaries) is installed from npm
@@ -96,14 +96,6 @@ dependencies {
 
     if(enableUseLibs){
         implementation fileTree(dir: 'libs', include: ['*.jar','*.aar'])
-//        implementation fileTree(dir: 'libs', include: ['*.jar'])
-//        if (enableHermes) {
-//            def hermesPath = "../../node_modules/hermes-engine/android/";
-//            debugImplementation files(hermesPath + "hermes-debug.aar")
-//            releaseImplementation files(hermesPath + "hermes-release.aar")
-//        } else {
-//            implementation jscFlavor
-//        }
     }else{
         implementation fileTree(dir: 'libs', include: ['*.jar'])
         if (enableHermes) {
