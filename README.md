@@ -50,6 +50,8 @@ iOS不使用rn0.60之后的自动配置,因为这会对原生项目造成侵入�
 
 
 ### ZXTT-RN 测试
+先在工程目录下执行 [yarn](https://www.baidu.com/link?url=OZPDrLVCg4dnBsO1aTf_w8z-smPA3r6LG_SWU2BR5wLmH1kRg10P5_RYcd7qFZ72&wd=&eqid=e8bd0a2700d3f4c0000000065da14cb0) install 或者(npm install)
+
 #### iOS
 `react-native run-ios --project-path ./examples/ios`
 
