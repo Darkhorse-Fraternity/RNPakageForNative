@@ -20,5 +20,5 @@ export const StyledBtn = styled.TouchableOpacity`
 
 export const StyledTop = styled.ImageBackground`
   width: 100%;
-  height: 100;
+  height: 197;
 `;

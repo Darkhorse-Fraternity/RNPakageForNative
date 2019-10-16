@@ -72,5 +72,12 @@ export const Question = styled.Text`
   font-size:20px;
   font-weight:bold;
   color:rgba(255,255,255,1);
-  line-height:60px;
+  line-height:30px;
+`;
+export const Option = styled.Button`
+  width:241.5px;
+  height:55px;
+  background:rgba(255,251,154,1);
+  border:5px solid rgba(67,67,67,1);
+  border-radius:55px;
 `;

@@ -1,10 +1,10 @@
 import Home from './Home'
-import Test1 from './Test1'
+import OneMStudy from './OneMStudy'
 import ForGift from './ForGift'
 
 const baseRoute = {
   home: {screen: Home},
-  test1: {screen: Test1},
+  onemstudy: {screen: OneMStudy},
   forGift: {screen: ForGift},
 };
 export default baseRoute;
