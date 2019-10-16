@@ -10,9 +10,10 @@ import {
   Number,
   Sum,
   Question,
-  Option
+  OptionBtn,
+  OptionTx
 } from './style'
-import {View,ImageBackground,Image,Text  } from 'react-native'
+import {View,TouchableHighlight,Text } from 'react-native'
 
 
 const data = [
@@ -45,20 +46,18 @@ const data = [
 const page1=()=>{
   return(
     <View>
-    <TopImage source={require('../../../source/img/OneMinuteStudy/top.png')}></TopImage>
+    <TopImage source={require('../../../source/img/OneMinuteStudy/top.png')}/>
     <BoardImage source={require('../../../source/img/OneMinuteStudy/bg.png')}>
       <View style={{flexDirection: "row",}}>
         <Line></Line>
         <Number>1</Number>
         <Sum>/5</Sum>
-        <Line style={{left:59.5}}></Line>
+        <Line style={{left:0}}></Line>
       </View>
       <Question>               
-      什么是建材保温材料 建材保温材料有哪些？                        
+        什么是建材保温材料 建材保温材料有哪些？                        
       </Question>
-      <Option title={'Answer1'}></Option>
-      <Option style={{top:30}} title={'Answer1'}></Option>
-      <Option title={'Answer1'}></Option>
+      <OptionBtn underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>answer1</OptionTx></OptionBtn>
     </BoardImage>
     </View>
   );
