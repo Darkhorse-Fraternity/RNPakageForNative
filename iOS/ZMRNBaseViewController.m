@@ -18,17 +18,24 @@
 
 @implementation ZMRNBaseViewController
 
+- (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil {
+    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
+    if (self) {
+        self.hidesBottomBarWhenPushed = YES;
+        [self initData];
+    }
+    return self;
+}
 
 -(instancetype)initWithInitialRouteName:(NSString *)initialRouteName{
     self = [super init];
     if(self){
         self.initialRouteName = initialRouteName;
-        [self initData];
+        
     }
     return self;
 }
 -(void)initData{
-     self.openBaseRouteBackBtn =false;
     
 }
 
@@ -45,19 +52,19 @@
 //    NSString *tracking_id = [[NSUserDefaults standardUserDefaults] objectForKey:KEY_Associative_Code];
     NSMutableDictionary *initialProperties = [NSMutableDictionary dictionaryWithCapacity:3];
 //    initialProperties[@"config"] = @{ @"api_html_host":API_HTML_HOST};
-    initialProperties[@"initialRouteName"] = self.initialRouteName;
     initialProperties[@"openBaseRouteBackBtn"] = @(self.openBaseRouteBackBtn);
+    if (self.initialRouteName.length>0) {
+        initialProperties[@"initialRouteName"] = self.initialRouteName;
+    }
+    if (self.networkConfig) {//httpRequest的参数
+        initialProperties[@"networkConfig"] = self.networkConfig;
+    }
+    if (self.common) {//其他公共参数
+        initialProperties[@"common"] = self.common;
+    }
     if(self.initialProperties){
         [initialProperties addEntriesFromDictionary:self.initialProperties];
-    }    
-//    if(info != nil){
-//        NSDictionary *infoDic = [BIDObjectToNSDictionary getObjectData: info];
-//        initialProperties[@"user"] = infoDic;
-//    }
-//    if(tracking_id !=nil){
-//        initialProperties[@"tracking_id"] = tracking_id;
-//    }
-//
+    }
   
     
     RCTRootView *rootView = [[RCTRootView alloc] initWithBridge:bm.bridge
@@ -100,14 +107,6 @@
     self.barStyle =  [UIApplication sharedApplication].statusBarStyle;
     self.navigationController.navigationBar.hidden = self.navigationBarHide;
 }
-/*
-#pragma mark - Navigation
 
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
