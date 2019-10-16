@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import {SafeAreaView} from 'react-navigation';
 
-export const StyledContent = styled.View`
+export const StyledContent = styled(SafeAreaView)`
   flex: 1;
 `;
 
@@ -17,3 +17,7 @@ export const StyledBtn = styled.TouchableOpacity`
   align-items:center;
   margin:20px;
 `;
+
+export const StyledTop = styled.ImageBackground`
+  width:100%;
+`

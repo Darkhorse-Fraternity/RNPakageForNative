@@ -12,10 +12,10 @@
     "lint": "eslint .",
     "ios-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./iOS/resources/main.jsbundle' --dev=false --platform='ios' --assets-dest='./iOS/resources' --verbose",
     "android-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./Android/zxtt-rn/src/main/assets/index.android.bundle' --dev=false --platform='android' --assets-dest='./Android/zxtt-rn/src/main/res/' --verbose",
-    "col-aar":"find ./node_modules -iname  \"*-release.aar\" |xargs -I f  cp \"f\" ./Android/zxtt-rn/libs && rm  ./Android/zxtt-rn/libs/hermes-cppruntime-release.aar",
-    "and-assemble":"cd examples/android && ./gradlew assembleRelease && cd ../..",
-    "and-rn-deploy":"npm run android-bundle && npm run and-assemble && npm run col-aar",
-    "rn-deploy":"npm run os-bundle && npm run and-rn-deploy"
+    "col-aar": "find ./node_modules -iname  \"*-release.aar\" |xargs -I f  cp \"f\" ./Android/zxtt-rn/libs && rm  ./Android/zxtt-rn/libs/hermes-cppruntime-release.aar",
+    "and-assemble": "cd examples/android && ./gradlew assembleRelease && cd ../..",
+    "and-rn-deploy": "npm run android-bundle && npm run and-assemble && npm run col-aar",
+    "rn-deploy": "npm run os-bundle && npm run and-rn-deploy"
   },
   "homepage": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git",
   "license": "MIT",
@@ -59,10 +59,13 @@
     "@react-native-community/eslint-config": "^0.0.5",
     "babel-jest": "^24.9.0",
     "eslint": "^6.4.0",
+    "eslint-plugin-typescript": "^0.14.0",
     "jest": "^24.9.0",
     "jetifier": "^1.6.4",
     "metro-react-native-babel-preset": "^0.56.0",
-    "react-test-renderer": "16.9.0"
+    "react-test-renderer": "16.9.0",
+    "typescript": "^3.6.4",
+    "typescript-eslint-parser": "^22.0.0"
   },
   "jest": {
     "preset": "react-native"

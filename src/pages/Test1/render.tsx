@@ -37,9 +37,7 @@ const data = [
 const render = () => {
   // 使用 useCallback 将PageItem转为记忆函数提高性能。
   return (
-    <BackGround >
-      <ImageBackground source={require('../../../source/img/OneMinuteStudy/back.png')} style={{width: '100%', height: '100%'}}>
-        <StyledContent>
+        <StyledContent source={require('../../../source/img/OneMinuteStudy/back.png')} >
           <TopImage source={require('../../../source/img/OneMinuteStudy/top.png')}></TopImage>
           <View>
             <BoardImage source={require('../../../source/img/OneMinuteStudy/bg.png')}>
@@ -55,8 +53,6 @@ const render = () => {
             </BoardImage>
           </View>
         </StyledContent>
-      </ImageBackground>
-    </BackGround>
     );  
 };
 
