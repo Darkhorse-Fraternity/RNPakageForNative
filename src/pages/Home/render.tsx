@@ -5,7 +5,8 @@ import {useNavigation} from 'react-navigation-hooks'
 
 interface PageItemType {
   pageName: string,
-  title: string
+  title: string,
+  key:string
 }
 
 
@@ -29,7 +30,7 @@ const render = () => {
   // 使用 useCallback 将PageItem转为记忆函数提高性能。
   const routesNames =  [
     {pageName:'forGift',title:'签到好礼'},
-    {pageName:'test1',title:'测试页面'},
+    {pageName:'onemstudy',title:'一分钟学习'},
     {pageName:'richText',title:'富文本'},
   ];
 

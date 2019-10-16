@@ -2,8 +2,9 @@ import styled from 'styled-components';
 
 // import {SafeAreaView} from 'react-navigation';
 
-export const StyledContent = styled.View`
+export const StyledContent = styled.ImageBackground`
   flex: 1;
+  background:rgba(255,91,91,1);
 `;
 
 export const StyledText = styled.Text`
@@ -26,10 +27,6 @@ export const StyledArrow = styled.View`
   transform: rotate(-45deg);
   width: 10;
   height: 10;
-`;
-export const BackGround = styled.View`
-  flex:1
-  background:rgba(255,91,91,1);
 `;
 export const TopImage = styled.Image`
   left: 41;
@@ -75,5 +72,12 @@ export const Question = styled.Text`
   font-size:20px;
   font-weight:bold;
   color:rgba(255,255,255,1);
-  line-height:60px;
+  line-height:30px;
+`;
+export const Option = styled.Button`
+  width:241.5px;
+  height:55px;
+  background:rgba(255,251,154,1);
+  border:5px solid rgba(67,67,67,1);
+  border-radius:55px;
 `;
