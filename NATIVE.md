@@ -34,3 +34,4 @@
   |  视图   | url  |
 |  ----  | ----  |
 | 课堂  | xxx |
+| 齐家币  | zxtt://open/native?params={\"url\":\"task_center\"}" |
