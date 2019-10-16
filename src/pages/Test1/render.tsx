@@ -1,9 +1,21 @@
 import React,{useCallback} from 'react';
-import {StyledContent,StyledBtn,StyledText,StyledArrow,BackGround,TopImage,BoardImage,Line,Number,Sum,Question} from './style'
+import {
+  StyledContent,
+  StyledBtn,
+  StyledText,
+  StyledArrow,
+  BackGround,
+  TopImage,
+  BoardImage,
+  Line,
+  Number,
+  Sum,
+  Question
+} from './style'
 import {View,ImageBackground,Image,Text  } from 'react-native'
 
-{
-  [
+
+const data = [
   {
     title:"",
     answer:["aaa","bbb","ccc"],
@@ -19,7 +31,7 @@ import {View,ImageBackground,Image,Text  } from 'react-native'
     answer:["aaa","bbb","ccc"],
     right:4,
   }
-]}
+]
 
 
 const render = () => {
