@@ -1,5 +1,5 @@
-import React from 'react'
-import {ActivityIndicator,View} from 'react-native'
+import React from './Home/node_modules/react'
+import {ActivityIndicator,View} from './Home/node_modules/react-native'
 
 export default function(){
     return(

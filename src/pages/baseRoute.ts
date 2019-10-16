@@ -1,9 +1,9 @@
-import Test from './Test'
+import Home from './Home'
 import Test2 from './Test2'
 import RichText from './RichText'
 
 const baseRoute = {
-  testPage: {screen: Test},
+  home: {screen: Home},
   test2: {screen: Test2},
   richText: {screen: RichText},
 };

@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from '../Test/node_modules/styled-components';
 import {SafeAreaView} from 'react-navigation';
 
 export const StyledContent = styled.View`
