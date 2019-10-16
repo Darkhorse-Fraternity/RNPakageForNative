@@ -18,6 +18,11 @@
 		2DCD954D1E0B4F2C00145EB5 /* ZXTTRNTestTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ZXTTRNTestTests.m */; };
 		38FC4664801DC598DDC00F85 /* libPods-ZXTTRNTest-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 172E234338F5BBB90E9240C0 /* libPods-ZXTTRNTest-tvOS.a */; };
 		7657BF45C5E8AD58B8F74BEA /* libPods-ZXTTRNTestTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E704D2AA7DD6295515532CB /* libPods-ZXTTRNTestTests.a */; };
+		77356BBC2356EE0100ACEAD7 /* RNUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 77356BAF2356EE0100ACEAD7 /* RNUtil.m */; };
+		77356BBD2356EE0100ACEAD7 /* DHRNBaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 77356BB02356EE0100ACEAD7 /* DHRNBaseViewController.m */; };
+		77356BBE2356EE0100ACEAD7 /* Notice.m in Sources */ = {isa = PBXBuildFile; fileRef = 77356BB52356EE0100ACEAD7 /* Notice.m */; };
+		77356BBF2356EE0100ACEAD7 /* RouterBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 77356BB72356EE0100ACEAD7 /* RouterBridge.m */; };
+		77356BC02356EE0100ACEAD7 /* Tool.m in Sources */ = {isa = PBXBuildFile; fileRef = 77356BBA2356EE0100ACEAD7 /* Tool.m */; };
 		9831359EF92D539C002A6CD8 /* libPods-ZXTTRNTest-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 246ED9DAD18755198FC66A53 /* libPods-ZXTTRNTest-tvOSTests.a */; };
 		E1FDADEA91FD0E4DB6091228 /* libPods-ZXTTRNTest.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E51868601178CD9803E2601C /* libPods-ZXTTRNTest.a */; };
 /* End PBXBuildFile section */
@@ -58,6 +63,16 @@
 		2D02E4901E0B4A5D006451C7 /* ZXTTRNTest-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "ZXTTRNTest-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EDDF3402628464F0214CD19 /* Pods-ZXTTRNTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXTTRNTestTests.debug.xcconfig"; path = "Target Support Files/Pods-ZXTTRNTestTests/Pods-ZXTTRNTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		66AD60B7AEA81E110B3AA29B /* Pods-ZXTTRNTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXTTRNTest.debug.xcconfig"; path = "Target Support Files/Pods-ZXTTRNTest/Pods-ZXTTRNTest.debug.xcconfig"; sourceTree = "<group>"; };
+		77356BAE2356EE0100ACEAD7 /* DHRNBaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHRNBaseViewController.h; sourceTree = "<group>"; };
+		77356BAF2356EE0100ACEAD7 /* RNUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RNUtil.m; sourceTree = "<group>"; };
+		77356BB02356EE0100ACEAD7 /* DHRNBaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHRNBaseViewController.m; sourceTree = "<group>"; };
+		77356BB12356EE0100ACEAD7 /* RNUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RNUtil.h; sourceTree = "<group>"; };
+		77356BB42356EE0100ACEAD7 /* Notice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Notice.h; sourceTree = "<group>"; };
+		77356BB52356EE0100ACEAD7 /* Notice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Notice.m; sourceTree = "<group>"; };
+		77356BB72356EE0100ACEAD7 /* RouterBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RouterBridge.m; sourceTree = "<group>"; };
+		77356BB82356EE0100ACEAD7 /* RouterBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RouterBridge.h; sourceTree = "<group>"; };
+		77356BBA2356EE0100ACEAD7 /* Tool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tool.m; sourceTree = "<group>"; };
+		77356BBB2356EE0100ACEAD7 /* Tool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tool.h; sourceTree = "<group>"; };
 		7A008E2153159E4F5DC7B937 /* Pods-ZXTTRNTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXTTRNTestTests.release.xcconfig"; path = "Target Support Files/Pods-ZXTTRNTestTests/Pods-ZXTTRNTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		9E704D2AA7DD6295515532CB /* libPods-ZXTTRNTestTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ZXTTRNTestTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A82BBDD5567C50EBFA608F99 /* Pods-ZXTTRNTest-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ZXTTRNTest-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-ZXTTRNTest-tvOS/Pods-ZXTTRNTest-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +140,7 @@
 		13B07FAE1A68108700A75B9A /* ZXTTRNTest */ = {
 			isa = PBXGroup;
 			children = (
+				77356BAC2356EE0000ACEAD7 /* RN */,
 				008F07F21AC5B25A0029DE68 /* main.jsbundle */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.m */,
@@ -162,6 +178,63 @@
 				7A008E2153159E4F5DC7B937 /* Pods-ZXTTRNTestTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		77356BAC2356EE0000ACEAD7 /* RN */ = {
+			isa = PBXGroup;
+			children = (
+				77356BAD2356EE0100ACEAD7 /* util */,
+				77356BB22356EE0100ACEAD7 /* bridge */,
+			);
+			path = RN;
+			sourceTree = "<group>";
+		};
+		77356BAD2356EE0100ACEAD7 /* util */ = {
+			isa = PBXGroup;
+			children = (
+				77356BAE2356EE0100ACEAD7 /* DHRNBaseViewController.h */,
+				77356BB02356EE0100ACEAD7 /* DHRNBaseViewController.m */,
+				77356BB12356EE0100ACEAD7 /* RNUtil.h */,
+				77356BAF2356EE0100ACEAD7 /* RNUtil.m */,
+			);
+			path = util;
+			sourceTree = "<group>";
+		};
+		77356BB22356EE0100ACEAD7 /* bridge */ = {
+			isa = PBXGroup;
+			children = (
+				77356BB32356EE0100ACEAD7 /* Notice */,
+				77356BB62356EE0100ACEAD7 /* RouterBridge */,
+				77356BB92356EE0100ACEAD7 /* Tool */,
+			);
+			path = bridge;
+			sourceTree = "<group>";
+		};
+		77356BB32356EE0100ACEAD7 /* Notice */ = {
+			isa = PBXGroup;
+			children = (
+				77356BB42356EE0100ACEAD7 /* Notice.h */,
+				77356BB52356EE0100ACEAD7 /* Notice.m */,
+			);
+			path = Notice;
+			sourceTree = "<group>";
+		};
+		77356BB62356EE0100ACEAD7 /* RouterBridge */ = {
+			isa = PBXGroup;
+			children = (
+				77356BB72356EE0100ACEAD7 /* RouterBridge.m */,
+				77356BB82356EE0100ACEAD7 /* RouterBridge.h */,
+			);
+			path = RouterBridge;
+			sourceTree = "<group>";
+		};
+		77356BB92356EE0100ACEAD7 /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				77356BBB2356EE0100ACEAD7 /* Tool.h */,
+				77356BBA2356EE0100ACEAD7 /* Tool.m */,
+			);
+			path = Tool;
 			sourceTree = "<group>";
 		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
@@ -569,7 +642,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
+				77356BBF2356EE0100ACEAD7 /* RouterBridge.m in Sources */,
+				77356BC02356EE0100ACEAD7 /* Tool.m in Sources */,
+				77356BBD2356EE0100ACEAD7 /* DHRNBaseViewController.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				77356BBE2356EE0100ACEAD7 /* Notice.m in Sources */,
+				77356BBC2356EE0100ACEAD7 /* RNUtil.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

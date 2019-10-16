@@ -16,6 +16,7 @@ NS_ASSUME_NONNULL_BEGIN
 @property(assign,nonatomic)BOOL openBaseRouteBackBtn;
 @property(strong,nonatomic)NSDictionary *initialProperties;
 -(instancetype)initWithInitialRouteName:(NSString *)initialRouteName;
+-(void)initData;
 @end
 
 NS_ASSUME_NONNULL_END
