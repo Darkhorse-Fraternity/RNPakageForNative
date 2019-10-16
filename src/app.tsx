@@ -7,7 +7,7 @@ import {creactAppContainer} from './pages';
 // import {setConfigNative, setTrackingId} from './configure/reqConfigs'
 import {Platform} from 'react-native';
 import codePush from 'react-native-code-push';
-require('./configure/jsExceptionHandle');
+require('./configure');
 
 interface PropsApp {
   readonly user: Object;

@@ -125,3 +125,4 @@ if(!enableUseLibs){
     //自动加载本地库。
     applyNativeModulesAppBuildGradle(project,"../..")
 }
+
