@@ -31,7 +31,6 @@ const render = () => {
   const routesNames =  [
     {pageName:'forGift',title:'签到好礼'},
     {pageName:'onemstudy',title:'一分钟学习'},
-    {pageName:'richText',title:'富文本'},
   ];
 
 
