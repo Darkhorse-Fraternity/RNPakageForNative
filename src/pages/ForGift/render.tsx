@@ -1,23 +1,14 @@
-import React,{useState} from 'react';
-import {
-  StyledContent,
-  StyledTop,
-  StyledText
-}from './style'
-
-
+import React, {useState} from 'react';
+import {StyledContent, StyledTop, StyledText} from './style';
 
 const render = () => {
-
   const [value, setValue] = useState(0);
   // const value = 0;
-  return (   
-    <StyledContent >
-      <StyledTop/>
-
-
+  return (
+    <StyledContent>
+      <StyledTop source={require('../../../source/img/forGift/GiftTop.png')} />
     </StyledContent>
-    );
+  );
 };
 
 export default render;
