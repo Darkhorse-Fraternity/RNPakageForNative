@@ -10,6 +10,7 @@
     "start": "react-native start",
     "test": "jest",
     "lint": "eslint .",
+    "reload": "curl http://localhost:8081/reload",
     "ios-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./iOS/resources/main.jsbundle' --dev=false --platform='ios' --assets-dest='./iOS/resources' --verbose",
     "android-bundle": "react-native bundle --entry-file='./index.js' --bundle-output='./Android/zxtt-rn/src/main/assets/index.android.bundle' --dev=false --platform='android' --assets-dest='./Android/zxtt-rn/src/main/res/' --verbose",
     "col-aar": "find ./node_modules -iname  \"*-release.aar\" |xargs -I f  cp \"f\" ./Android/zxtt-rn/libs && rm  ./Android/zxtt-rn/libs/hermes-cppruntime-release.aar",

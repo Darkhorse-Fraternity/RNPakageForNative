@@ -1,29 +1,5 @@
 import styled from 'styled-components';
-import {SafeAreaView} from 'react-navigation';
 import {StatusBarHeight} from '../../components/Nav/bar';
-
-export const StyledContent = styled.View`
-  flex: 1;
-  background-color: #f5f6f9;
-`;
-
-export const StyledText = styled.Text`
-  color: #333333;
-  font-size: 14;
-  width: 100;
-`;
-
-export const StyledBtn = styled.TouchableOpacity`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px;
-`;
-
-export const StyledTop = styled.ImageBackground`
-  width: 100%;
-  height: 197;
-`;
 
 export const StyledNavbar = styled.View`
   width: 100%;
