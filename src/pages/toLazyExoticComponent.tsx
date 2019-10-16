@@ -1,4 +1,4 @@
-import React,{PureComponent, Suspense, LazyExoticComponent,ReactElement} from './Home/node_modules/react';
+import React,{PureComponent, Suspense, LazyExoticComponent,ReactElement} from 'react';
 import load from './load'
 
 interface RHType {
