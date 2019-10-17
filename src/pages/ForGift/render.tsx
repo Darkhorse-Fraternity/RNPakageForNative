@@ -19,6 +19,7 @@ const render = () => {
   // const value = 0;
   return (
     <StyledContent>
+      {/* <StatusBar translucent={true} backgroundColor='transparent' barStyle="dark-content" /> */}
       <NavBar title={'签到好礼'} />
       <StyledTop source={require('../../../source/img/forGift/GiftTop.png')} />
       {topView()}
