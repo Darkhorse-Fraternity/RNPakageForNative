@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {StatusBarHeight} from '../../components/Nav/bar';
-
+import {StatusBarHeight} from '../index';
+import {Animated} from 'react-native';
 export const StyledNavbar = styled.View`
   width: 100%;
   background-color: transparent;
@@ -25,7 +25,7 @@ export const StyledArrow = styled.TouchableOpacity`
   left: 20;
 `;
 
-export const StyledTitle = styled.Text`
+export const StyledTitle = styled(Animated.Text)`
   color: white;
   font-size: 17;
 `;

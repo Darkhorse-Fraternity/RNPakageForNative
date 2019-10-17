@@ -1,4 +1,4 @@
-import React, { PureComponent } from 'react';
+import React, {PureComponent} from 'react';
 import PropTypes from 'prop-types';
 import {
   StyleSheet,
@@ -14,18 +14,18 @@ import {
 } from 'react-native';
 
 // import Button from '../../Button';
-import { HeaderBackImage2 } from '../HeaderBackButton';
+import {HeaderBackImage2} from '../HeaderBackButton';
 
 const backWidth = Dimensions.get('window').width / 3;
 
 export default class BackTabBar extends PureComponent {
   static propTypes = {
-    title: PropTypes.string
+    title: PropTypes.string,
   };
 
   static defaultProps = {
-    title: ''
-  }
+    title: '',
+  };
 
   render() {
     const {
@@ -36,18 +36,22 @@ export default class BackTabBar extends PureComponent {
       style,
       titleColor,
       onBackPress,
-      backStyle
+      backStyle,
     } = this.props;
 
-    const background = TouchableNativeFeedback.SelectableBackgroundBorderless
-      && TouchableNativeFeedback.SelectableBackgroundBorderless();
+    const background =
+      TouchableNativeFeedback.SelectableBackgroundBorderless &&
+      TouchableNativeFeedback.SelectableBackgroundBorderless();
     return (
-      <Animated.View style={[styles.tabs, {
-        backgroundColor:
-        backgroundColor || 'white',
-        marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight
-      }, style]}
-      >
+      <Animated.View
+        style={[
+          styles.tabs,
+          {
+            backgroundColor: backgroundColor || 'white',
+            marginTop: Platform.OS === 'ios' ? 0 : StatusBar.currentHeight,
+          },
+          style,
+        ]}>
         <StatusBar
           translucent
           backgroundColor="transparent"
@@ -61,29 +65,29 @@ export default class BackTabBar extends PureComponent {
           style={{
             width: backWidth,
             justifyContent: 'center',
-          }}
-        >
-          <HeaderBackImage2 color={tintColor || 'black'} style={[{ marginLeft: 20 }, backStyle]} />
+          }}>
+          <HeaderBackImage2
+            color={tintColor || 'black'}
+            style={[{marginLeft: 20}, backStyle]}
+          />
         </TouchableOpacity>
         <View style={[styles.tab, styles.contain]}>
           <Animated.Text
             adjustsFontSizeToFit
             numberOfLines={1}
-            style={[styles.title, { color: titleColor || tintColor }]}
-          >
+            style={[styles.title, {color: titleColor || tintColor}]}>
             {title}
           </Animated.Text>
         </View>
-        <View style={{
-          width: backWidth,
-          flexDirection: 'row',
-          justifyContent: 'flex-end',
-          paddingRight: 0,
-          alignItems: 'center'
-        }}
-        >
-          {this.props.rightView
-          && this.props.rightView()}
+        <View
+          style={{
+            width: backWidth,
+            flexDirection: 'row',
+            justifyContent: 'flex-end',
+            paddingRight: 0,
+            alignItems: 'center',
+          }}>
+          {this.props.rightView && this.props.rightView()}
         </View>
       </Animated.View>
     );
@@ -97,8 +101,6 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     // paddingBottom: 10,
     flexDirection: 'row',
-
-
   },
   contain: {
     flexDirection: 'row',
@@ -112,11 +114,10 @@ const styles = StyleSheet.create({
     borderLeftWidth: 0,
     borderRightWidth: 0,
     borderBottomColor: 'transparent',
-
   },
   title: {
     alignItems: 'center',
     fontSize: 18,
     fontWeight: '300',
-  }
+  },
 });

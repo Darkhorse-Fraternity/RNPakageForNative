@@ -1,5 +1,5 @@
 import React, {lazy} from 'react';
-import {Text} from 'react-native';
+
 // import render from './render'
 import {toLazyExoticComponent} from '../toLazyExoticComponent'
 const render = lazy(() => import('./render'));
