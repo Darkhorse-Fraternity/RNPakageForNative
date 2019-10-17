@@ -37,7 +37,7 @@ const AppView = (props: PropsApp) => {
   );
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar backgroundColor="white" barStyle="dark-content" translucent />
+      <StatusBar  translucent />
       <AppContainer />
     </ThemeProvider>
   );

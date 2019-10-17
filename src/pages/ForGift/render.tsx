@@ -9,25 +9,20 @@ import {
 } from './style';
 import {StatusBar} from 'react-native';
 import {View} from 'react-native';
-
-const NavBar = () => {
-  return (
-    <StyledNavbar>
-      <StyledArrow />
-      <StyledTitle>签到好礼</StyledTitle>
-      <View />
-    </StyledNavbar>
-  );
-};
+import {topView} from './topView';
+import {giftView} from './giftView';
+import {welfare} from './welfare'; //福利页面
+import {NavBar} from '../../components/Nav/bar/TSNavBar';
 
 const render = () => {
   const [value, setValue] = useState(0);
   // const value = 0;
   return (
     <StyledContent>
-      <StatusBar backgroundColor="white" barStyle="light-content" translucent />
-      {NavBar()}
+      <NavBar title={'签到好礼'} />
       <StyledTop source={require('../../../source/img/forGift/GiftTop.png')} />
+      {topView()}
+      {giftView()}
     </StyledContent>
   );
 };
