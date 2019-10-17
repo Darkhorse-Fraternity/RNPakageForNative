@@ -52,6 +52,11 @@ const data = [
   }
 ]
 const page1=()=>{
+  const next=()=>{
+      var title=data[0].title;
+      var answer=data[0].answer;
+      var right=data[0].right;
+  }
   return(
     <View style={{flex:1}}>
     <TopImage source={require('../../../source/img/OneMinuteStudy/top.png')}/>
@@ -75,11 +80,11 @@ const page1=()=>{
 const word=(a)=>{
   switch(a){
     case(0):
-    case(1):return({a:1,b:'35%',c:'装修知识有点缺哦，萌小白是在说你吧？赶快学起来！'}); break;
+    case(1):return({a:1,b:'35%',c:'装修知识有点缺哦，萌小白是在说你吧？赶快学起来！'});
     case(2):
-    case(3):return({a:2,b:'53%',c:'新人级宝宝一枚，多学多看多问，装修难不倒你！'}); break;
-    case(4):return({a:3,b:'77%',c:'进阶型潜力股，大坑可躲，小坑难防，学习让你变更强！'}); break;
-    case(5):return({a:4,b:'91%',c:'装修知识很丰富嘛，据说好学努力的能力者会更迷人！'}); break;
+    case(3):return({a:2,b:'53%',c:'新人级宝宝一枚，多学多看多问，装修难不倒你！'});
+    case(4):return({a:3,b:'77%',c:'进阶型潜力股，大坑可躲，小坑难防，学习让你变更强！'});
+    case(5):return({a:4,b:'91%',c:'装修知识很丰富嘛，据说好学努力的能力者会更迷人！'});
   }      
 }
 const showstar=(a)=>{
@@ -125,8 +130,8 @@ const render = () => {
   // 使用 useCallback 将PageItem转为记忆函数提高性能。
   return (
         <Background source={require('../../../source/img/OneMinuteStudy/back.png')}>
-          {/* {page1()}    */}
-          {page2()}
+          {page1()}   
+          {/* {page2()} */}
         </Background>
     );  
 };
