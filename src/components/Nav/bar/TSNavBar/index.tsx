@@ -23,10 +23,14 @@ interface PropsNavBar {
 const onDefaultBackPress = (event: GestureResponderEvent) => {};
 
 const renderDefaultLeftView = (props: PropsNavBar) => {
-  const {goBack, isFirstRouteInParent} = useNavigation();
-  const go = () => goBack();
+  const {goBack, isFirstRouteInParent, getScreenProps} = useNavigation();
+  const {openBaseRouteBackBtn} = getScreenProps();
+
+  const go = openBaseRouteBackBtn
+    ? () => RouterBridge.pop(true)
+    : () => goBack();
   const {onBackPress = go} = props;
-  if (isFirstRouteInParent()) {
+  if (isFirstRouteInParent() && !openBaseRouteBackBtn) {
     return <View />;
   }
   return (
@@ -50,7 +54,11 @@ export const NavBar = (props: PropsNavBar) => {
   } = props;
   return (
     <>
-      <StatusBar backgroundColor="white" barStyle="light-content" translucent />
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle="light-content"
+        translucent
+      />
       <StyledNavbar>
         {renderLeftView(props)}
         <StyledTitle>{title}</StyledTitle>
