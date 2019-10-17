@@ -1,20 +1,52 @@
 import React, { useState } from 'react';
-import { StyledContent1,StyledContent2, StyledTitle, StyledTitle1 } from './style';
+import * as main from './style';
 import { StatusBar } from 'react-native';
 import { View } from 'react-native';
-// import {NavBar} from '../../component/Nav/bar/'
 
 export const signInTitle = () => {
   return (
-    <StyledContent2>
-      <StyledTitle>已连续签到</StyledTitle>
-      <StyledTitle1>2</StyledTitle1>
-      <StyledTitle>天</StyledTitle>
-    </StyledContent2>
+    <main.titleView>
+      <main.titleBlack>已连续签到 </main.titleBlack>
+      <main.titleRed>0</main.titleRed>
+      <main.titleBlack> 天</main.titleBlack>
+    </main.titleView>
   );
 };
+
+export const signInPointView = (point : number,day : number) => {
+  return (
+    <main.signCircleBox>
+      <main.signCircleOut>
+        <main.signCircleIn>
+          <main.titleBC6226>
+            +{point}
+        </main.titleBC6226>
+        </main.signCircleIn>
+      </main.signCircleOut>
+      <main.titleEBB795>
+      {day}天
+      </main.titleEBB795>
+    </main.signCircleBox>
+
+  );
+};
+
 export const topView = () => {
   //   const [value, setValue] = useState(0);
   // const value = 0;
-  return <StyledContent1>{signInTitle()}</StyledContent1>;
+   const aa =[]
+   for (let index = 0; index < 7; index++) {
+     aa.push(signInPointView(6,index))
+     
+   }
+
+  return (
+    
+    <main.mainView>
+      {signInTitle()}
+      {aa}
+      
+      
+    </main.mainView>
+  );
 };
