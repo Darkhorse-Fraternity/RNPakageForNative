@@ -15,7 +15,7 @@ export const StyledNavbar = styled.View`
   /* background-color: red; */
 `;
 // eslint-disable-next-line import/prefer-default-export
-export const StyledArrow = styled.TouchableOpacity`
+export const StyledArrow = styled.View`
   border-bottom-width: ${props => props.theme.hairlineWidth * 5};
   border-right-width: ${props => props.theme.hairlineWidth * 5};
   border-color: ${props => props.color || 'white'};
@@ -27,5 +27,6 @@ export const StyledArrow = styled.TouchableOpacity`
 
 export const StyledTitle = styled(Animated.Text)`
   color: white;
-  font-size: 17;
+  font-size: 18;
+  font-weight: 400;
 `;

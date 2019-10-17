@@ -5,8 +5,10 @@ import {
   View,
   TouchableOpacity,
   GestureResponderEvent,
+  NativeModules,
 } from 'react-native';
-import {useNavigation} from 'react-navigation-hooks';
+import {useNavigation, useNavigationState} from 'react-navigation-hooks';
+const {RouterBridge} = NativeModules;
 // const NavBar = title => {
 //   return <StyledNavbar />;
 // };
@@ -21,9 +23,12 @@ interface PropsNavBar {
 const onDefaultBackPress = (event: GestureResponderEvent) => {};
 
 const renderDefaultLeftView = (props: PropsNavBar) => {
-  const {goBack} = useNavigation();
+  const {goBack, isFirstRouteInParent} = useNavigation();
   const go = () => goBack();
   const {onBackPress = go} = props;
+  if (isFirstRouteInParent()) {
+    return <View />;
+  }
   return (
     <TouchableOpacity
       onPress={onBackPress}

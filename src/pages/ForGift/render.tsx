@@ -2,17 +2,32 @@ import React, {useState} from 'react';
 import {
   StyledContent,
   StyledTop,
-  StyledText,
-  StyledNavbar,
-  StyledArrow,
-  StyledTitle,
+  StyledCoinView,
+  StyledCoinText,
+  StyledCoinArrow,
 } from './style';
-import {StatusBar} from 'react-native';
+import {NativeModules} from 'react-native';
 import {View} from 'react-native';
 import {topView} from './topView';
 import {giftView} from './giftView';
 import {welfare} from './welfare'; //福利页面
 import {NavBar} from '../../components/Nav/bar/TSNavBar';
+const {RouterBridge} = NativeModules;
+const coinView = coin => {
+  return (
+    <StyledCoinView
+      onPress={() => {
+        RouterBridge.push('zxtt://open/native?params={"url":"task_center"}');
+      }}>
+      <StyledCoinText>我的齐家币:</StyledCoinText>
+      <StyledCoinText
+        style={{fontSize: 20, fontWeight: '500', marginBottom: 2}}>
+        {coin}
+      </StyledCoinText>
+      <StyledCoinArrow />
+    </StyledCoinView>
+  );
+};
 
 const render = () => {
   const [value, setValue] = useState(0);
@@ -20,7 +35,9 @@ const render = () => {
   return (
     <StyledContent>
       <NavBar title={'签到好礼'} />
-      <StyledTop source={require('../../../source/img/forGift/GiftTop.png')} />
+      <StyledTop source={require('../../../source/img/forGift/GiftTop.png')}>
+        {coinView(100)}
+      </StyledTop>
       {topView()}
       {giftView()}
     </StyledContent>
