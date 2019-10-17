@@ -9,6 +9,9 @@ import {
 } from './style';
 import {StatusBar} from 'react-native';
 import {View} from 'react-native';
+import {topView} from './topView';
+import {format} from 'path';
+// import {NavBar} from '../../component/Nav/bar/'
 
 const NavBar = () => {
   return (
@@ -28,6 +31,7 @@ const render = () => {
       <StatusBar backgroundColor="white" barStyle="light-content" translucent />
       {NavBar()}
       <StyledTop source={require('../../../source/img/forGift/GiftTop.png')} />
+      {topView()}
     </StyledContent>
   );
 };
