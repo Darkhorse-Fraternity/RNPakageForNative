@@ -37,7 +37,11 @@ const AppView = (props: PropsApp) => {
   );
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar backgroundColor="white" barStyle="dark-content" translucent />
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle="dark-content"
+        translucent
+      />
       <AppContainer screenProps={{initialRouteName, openBaseRouteBackBtn}} />
     </ThemeProvider>
   );

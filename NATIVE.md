@@ -29,6 +29,7 @@
 |  视图   | key  |  
 |  ----  | ----  |
 | 签到好礼  | forGift |
+| 一分钟学习  | onemstudy |
 
 ### 5. native视图key
   |  视图   | url  |
