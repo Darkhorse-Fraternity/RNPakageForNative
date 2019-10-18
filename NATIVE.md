@@ -41,15 +41,22 @@
 
 ### 6. req header 原生传递参数说明
 
+
+interface networkConfigProps {
+  host:string,
+  headerConfig:object,
+  h5Host:string,
+}
+
 `interface PropsApp {
-  readonly networkConfig: string | Object;
+  readonly networkConfig: networkConfigProps | string;
   readonly user?: string | Object;
   readonly common?: string | Object;
   readonly initialRouteName?: string;
   readonly openBaseRouteBackBtn?: boolean;
 }`
 eg:
-networkConfig：
+headerConfig:
 {
   "app-id" : "800",
   "appkey" :"015a5f879a124a258f51cf89ea21a701",

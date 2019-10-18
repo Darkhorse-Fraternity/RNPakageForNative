@@ -12,28 +12,24 @@ const questionListResDefault = {
   question_list: [],
 };
 
-interface questionListResType {
-  number: 0;
-  question_list: [];
-}
-
-const render = () => {
-  // 使用 useCallback 将PageItem转为记忆函数提高性能。
-
-  const [questionListRes, setQuestionListRes] = useState(
-    questionListResDefault,
-  );
+const fetch = <T extends {}>(params, defaultValue: T): T => {
+  const [data, setData] = useState(defaultValue);
 
   useEffect(() => {
     // Update the document title using the browser API
     const fetchData = async () => {
-      const getQuestionListParams = getQuestionList();
-      const res = await req(getQuestionListParams);
-      setQuestionListRes(res);
+      const res = await req(params);
+      setData(res);
     };
     fetchData();
   }, []);
+  return data;
+};
 
+const render = () => {
+  // 使用 useCallback 将PageItem转为记忆函数提高性能。
+  const getQuestionListParams = getQuestionList();
+  const questionListRes = fetch(getQuestionListParams, questionListResDefault);
   const {number, question_list} = questionListRes;
   console.log('number', number);
   console.log('question_list', question_list);
