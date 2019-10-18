@@ -20,7 +20,10 @@ export const defaultNavigationOptions = {
     },
     borderBottomColor: 'white',
     elevation: 0,
-    marginTop: Platform.OS === 'ios' || Platform.Version < 20 ? 0 : 0,
+    marginTop:
+      Platform.OS === 'ios' || Platform.Version < 20
+        ? 0
+        : StatusBar.currentHeight,
     // headerBackTitle:' '
   },
   headerTintColor: 'black',
@@ -30,7 +33,11 @@ export const defaultNavigationOptions = {
     fontWeight: '300',
   },
   // headerBackImage: require('../../source/img/bar/back-icon.png'),
-  headerBackImage: <HeaderBackImage style={{margin: 15}} />,
+  headerBackImage: (
+    <HeaderBackImage
+      style={{margin: 15, marginLeft: Platform.OS === 'ios' ? 15 : 0}}
+    />
+  ),
   headerBackTitle: null,
   gesturesEnabled: true,
 };

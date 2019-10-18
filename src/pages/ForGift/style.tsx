@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {SafeAreaView} from 'react-navigation';
 import {StatusBarHeight} from '../../components/Nav/bar';
+import Button from '../../components/Button';
 
 export const StyledContent = styled.View`
   flex: 1;
@@ -13,24 +14,18 @@ export const StyledText = styled.Text`
   width: 100;
 `;
 
-export const StyledBtn = styled.TouchableOpacity`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px;
-`;
-
 export const StyledTop = styled.ImageBackground`
   width: 100%;
   height: 197;
   flex-direction: column-reverse;
 `;
 
-export const StyledCoinView = styled.TouchableOpacity`
+export const StyledCoinView = styled(Button)`
   flex-direction: row;
-  margin-bottom: 70;
+  margin-bottom: ${125 - StatusBarHeight};
   margin-left: 15;
   align-items: center;
+  max-width: 150;
 `;
 
 export const StyledCoinText = styled.Text`

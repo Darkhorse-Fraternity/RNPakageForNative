@@ -43,6 +43,6 @@ def use_rn_pod!(root = ".", config = nil)
     pod 'react-native-simple-toast', :path => rootPath + 'react-native-simple-toast'
     pod 'RNCAsyncStorage', :path => rootPath + '@react-native-community/async-storage'
     pod 'CodePush', :path => rootPath + 'react-native-code-push'
- 
+    pod 'BVLinearGradient', :path => rootPath + 'react-native-linear-gradient'
 #    use_native_modules!(root,config)
 end

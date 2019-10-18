@@ -18,6 +18,8 @@ import com.learnium.RNDeviceInfo.RNDeviceInfo;
 import com.microsoft.codepush.react.CodePush;
 // @react-native-community/async-storage
 import com.reactnativecommunity.asyncstorage.AsyncStoragePackage;
+// react-native-linear-gradient
+import com.BV.LinearGradient.LinearGradientPackage;
 // react-native-reanimated
 import com.swmansion.reanimated.ReanimatedPackage;
 // react-native-screens
@@ -59,6 +61,7 @@ public class PackageList {
       new RNDeviceInfo(),
       new CodePush("",getApplicationContext(),BuildConfig.DEBUG),
       new AsyncStoragePackage(),
+      new LinearGradientPackage(),
       new ReanimatedPackage(),
       new RNScreensPackage()
     ));
