@@ -10,6 +10,5 @@
 
 
 @interface DHRNBaseViewController : ZMRNBaseViewController
-
 @end
 
