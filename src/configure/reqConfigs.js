@@ -1,6 +1,6 @@
 /* @flow */
 import {NativeModules} from 'react-native';
-
+import {Platform} from 'react-native';
 const {Tool} = NativeModules;
 const {getUerInfo} = Tool;
 
@@ -16,8 +16,12 @@ export const apiHost = !__DEV__
 
 export let apiHostNative = '';
 
-export const setConfigNative = config => {
-  apiHostNative = config.api_html_host;
+let config = {};
+export const setConfigNative = nConfig => {
+  if (Platform.OS !== 'ios') {
+    config.headerConfig === JSON.parse(config.headerConfig);
+  }
+  apiHostNative = nConfig.host;
 };
 
 let trackingId;
@@ -31,23 +35,24 @@ export const getTrackingId = () => {
 };
 
 export function httpHeaders() {
-  const appVersion = DeviceInfo.getVersion();
-  const uniqueId = DeviceInfo.getUniqueID();
-  const user = getUerInfo();
-  const header = {
-    'Content-Type': 'application/json; charset=utf-8',
-    'app-version': appVersion,
-    'source-from': 'zmzx-app',
-    'device-id': uniqueId,
-    platform: 'ios',
-    sign: user.sign,
-    channel: 'AppStore',
+  // const appVersion = DeviceInfo.getVersion();
+  // const uniqueId = DeviceInfo.getUniqueID();
+  // const user = getUerInfo();
+  // const header = {
+  //   'Content-Type': 'application/json; charset=utf-8',
+  //   'app-version': appVersion,
+  //   'source-from': 'zmzx-app',
+  //   'device-id': uniqueId,
+  //   platform: 'ios',
+  //   sign: user.sign,
+  //   channel: 'AppStore',
 
-    // appChannel
-  };
-
+  //   // appChannel
+  // };
+  // config.headerConfig
   // console.log('header', header);
 
   // console.log('LeanCloud_APP_Session', LeanCloud_APP_Session);
-  return header;
+
+  return config.headerConfig;
 }

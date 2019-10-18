@@ -40,6 +40,15 @@
 
 
 ### 6. req header 原生传递参数说明
+
+`interface PropsApp {
+  readonly networkConfig: string | Object;
+  readonly user?: string | Object;
+  readonly common?: string | Object;
+  readonly initialRouteName?: string;
+  readonly openBaseRouteBackBtn?: boolean;
+}`
+eg:
 networkConfig：
 {
   "app-id" : "800",

@@ -22,7 +22,6 @@
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
         self.hidesBottomBarWhenPushed = YES;
-        [self initData];
     }
     return self;
 }
@@ -32,6 +31,7 @@
     if(self){
         self.initialRouteName = initialRouteName;
         self.openBaseRouteBackBtn = YES;
+    
     }
     return self;
 }
@@ -45,7 +45,7 @@
 //    if(self.navigationController){
 //        self.openBaseRouteBackBtn = self.navigationController.childViewControllers.count > 1;
 //    }
-    
+    [self initData];
     BridgeManage *bm = [BridgeManage shareInstance];
     [bm run];
 //    ZMLoginUserInfoModel *info =  [QJShareTools getUserInfoModel].userInfo;

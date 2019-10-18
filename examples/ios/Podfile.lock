@@ -193,8 +193,9 @@ PODS:
     - React-cxxreact (= 0.61.2)
     - React-jsi (= 0.61.2)
   - React-jsinspector (0.61.2)
-  - react-native-simple-toast (0.1.1):
+  - react-native-simple-toast (1.0.0):
     - React
+    - Toast (~> 4.0.0)
   - React-RCTActionSheet (0.61.2):
     - React-Core/RCTActionSheetHeaders (= 0.61.2)
   - React-RCTAnimation (0.61.2):
@@ -241,6 +242,7 @@ PODS:
   - RNScreens (2.0.0-alpha.4):
     - React
   - SSZipArchive (2.2.2)
+  - Toast (4.0.0)
   - Yoga (1.14.0)
   - ZXTTInRN (1.0.0):
     - CodePush (>= 5.7.0)
@@ -293,6 +295,8 @@ SPEC REPOS:
     - JWT
     - LookinServer
     - SSZipArchive
+  trunk:
+    - Toast
 
 EXTERNAL SOURCES:
   BVLinearGradient:
@@ -385,7 +389,7 @@ SPEC CHECKSUMS:
   React-jsi: 32285a21b1b24c36060493ed3057a34677d58d09
   React-jsiexecutor: 8909917ff7d8f21a57e443a866fd8d4560e50c65
   React-jsinspector: 111d7d342b07a904c400592e02a2b958f1098b60
-  react-native-simple-toast: 1fc69d83c24279ed4f9624352551a5a3406678a2
+  react-native-simple-toast: 6c376bd79b1e255a4bee90a72ead6447f96ea10d
   React-RCTActionSheet: 89b037c0fb7d2671607cb645760164e7e0c013f6
   React-RCTAnimation: e3cefa93c38c004c318f7ec04b883eb14b8b8235
   React-RCTBlob: d26ac0e313fbf14e7203473fd593ccaaeee8329e
@@ -402,6 +406,7 @@ SPEC CHECKSUMS:
   RNReanimated: 6abbbae2e5e72609d85aabd92a982a94566885f1
   RNScreens: 84be1a2369a580beb2fea0755cc62ef16b83fffe
   SSZipArchive: fa16b8cc4cdeceb698e5e5d9f67e9558532fbf23
+  Toast: 91b396c56ee72a5790816f40d3a94dd357abc196
   Yoga: 14927e37bd25376d216b150ab2a561773d57911f
   ZXTTInRN: b1b2dd0cc528a09ae92da4ef15fe1b18fd2e1cb9
 
