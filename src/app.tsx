@@ -4,7 +4,7 @@ import {ThemeProvider} from 'styled-components';
 import {theme} from '../theme';
 import {creactAppContainer} from './pages';
 import { setUserInfo } from './help/tool';
-// import {setConfigNative} from './configure/reqConfigs';
+import {setConfigNative} from './configure/reqConfigs';
 
 import codePush from 'react-native-code-push';
 require('./configure');
