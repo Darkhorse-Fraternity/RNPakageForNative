@@ -29,7 +29,8 @@ export const StyledArrow = styled.View`
   height: 10;
 `;
 export const TopImage = styled.Image`
-  margin-left: 41;
+  align-self: center;
+  left:10;
 `;
 export const TopImage1 = styled.ImageBackground`
   align-self: center;
