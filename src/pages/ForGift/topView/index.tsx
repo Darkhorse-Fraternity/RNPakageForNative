@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
 import * as main from './style';
-import { StatusBar } from 'react-native';
-import { View } from 'react-native';
-
 export const signInTitle = () => {
   return (
     <main.titleView>
@@ -13,18 +10,18 @@ export const signInTitle = () => {
   );
 };
 
-export const signInPointView = (point : number,day : number) => {
+export const signInPointView = (point: number, day: number) => {
   return (
     <main.signCircleBox>
       <main.signCircleOut>
         <main.signCircleIn>
           <main.titleBC6226>
             +{point}
-        </main.titleBC6226>
+          </main.titleBC6226>
         </main.signCircleIn>
       </main.signCircleOut>
       <main.titleEBB795>
-      {day}天
+        {day}天
       </main.titleEBB795>
     </main.signCircleBox>
 
@@ -34,19 +31,23 @@ export const signInPointView = (point : number,day : number) => {
 export const topView = () => {
   //   const [value, setValue] = useState(0);
   // const value = 0;
-   const aa =[]
-   for (let index = 0; index < 7; index++) {
-     aa.push(signInPointView(6,index))
-     
-   }
+  const pointArray = [5, 0, 8, 12, 18, 26, 0]
+  const pointViewArray = []
+  for (let index = 0; index < 7; index++) {
+    pointViewArray.push(signInPointView(pointArray[index], index + 1))
+  }
 
   return (
-    
+
     <main.mainView>
       {signInTitle()}
-      {aa}
-      
-      
-    </main.mainView>
+      <main.signCircleBoxListView>
+        {pointViewArray}
+      </main.signCircleBoxListView>
+      {/* <DashLine lineWidth={2} /> */}
+
+
+
+    </main.mainView >
   );
 };

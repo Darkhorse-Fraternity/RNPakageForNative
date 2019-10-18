@@ -11,7 +11,7 @@ export const titleView = styled.View`
   flex-direction:row;
   height: 16;
   /* width: 100%-30px; */
-  margin: 21px 0px 15px 17px;
+  margin: 21px 0px 0px 17px;
   background-color: white;
 `;
 export const titleBlack = styled.Text`
@@ -24,12 +24,19 @@ export const titleRed = styled.Text`
 `;
 //圆圈style
 
+export const signCircleBoxListView = styled.View`
+  flex-direction:row;
+  height: 50;
+  margin: 20px 0 0px 10px;
+  background-color: white;
+  justify-content: space-around;
+`;
 
 export const signCircleBox = styled.View`
   align-items: center;
   justify-content: center;
-  height: 35;
-  width: 50;
+  height: 50;
+  width: 35;
   background-color: white;
 `;
 
@@ -60,3 +67,4 @@ export const titleEBB795 = styled.Text`
   color: #EBB795;
   font-size: 10;
 `;
+
