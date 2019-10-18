@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 import {SafeAreaView} from 'react-navigation';
 import {StatusBarHeight} from '../../components/Nav/bar';
 import Button from '../../components/Button';
@@ -33,7 +33,10 @@ export const StyledCoinText = styled.Text`
   font-size: 16;
 `;
 
-export const StyledCoinArrow = styled.View`
+interface StyledCoinArrowProps {
+  color?: string;
+}
+export const StyledCoinArrow = styled.View<StyledCoinArrowProps>`
   border-bottom-width: ${props => props.theme.hairlineWidth * 5};
   border-right-width: ${props => props.theme.hairlineWidth * 5};
   border-color: ${props => props.color || 'white'};

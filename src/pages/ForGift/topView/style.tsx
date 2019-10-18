@@ -2,16 +2,15 @@ import styled from 'styled-components/native';
 import { StatusBarHeight } from '../../../components/Nav/bar';
 import LinearGradient from 'react-native-linear-gradient';
 
-
 export const mainView = styled.View`
   height: 270;
   /* width: 100%-30px; */
-  margin: -81px 15px 0px 15px;
+  margin: ${StatusBarHeight - 110}px 15px 0px 15px;
   background-color: white;
   border-radius: 5px;
 `;
 export const titleView = styled.View`
-  flex-direction:row;
+  flex-direction: row;
   height: 16;
   margin: 21px 0px 0px 17px;
   background-color: white;
@@ -28,7 +27,7 @@ export const titleRed = styled.Text`
 //圆圈style
 
 export const signCircleBoxListView = styled.View`
-  flex-direction:row;
+  flex-direction: row;
   height: 50;
   margin: 20px 0 0px 10px;
   background-color: white;
@@ -57,17 +56,17 @@ export const signCircleOut = styled.View`
   justify-content: center;
   height: 35;
   width: 35;
-  background-color: #FFF1EB;
+  background-color: #fff1eb;
 `;
 export const titleBC6226 = styled.Text`
-  color: #BC6226;
+  color: #bc6226;
   font-size: 10;
   font-weight: bold;
 `;
 
 export const titleEBB795 = styled.Text`
-  margin-top:5;
-  color: #EBB795;
+  margin-top: 5;
+  color: #ebb795;
   font-size: 10;
 `;
 
@@ -79,7 +78,10 @@ export const StyledSubmit = styled(LinearGradient)`
   justify-content: center;
 `;
 
-export const StyledSubmitText = styled.Text`
+interface StyledSubmitTextProps {
+  color?: string;
+}
+export const StyledSubmitText = styled.Text<StyledSubmitTextProps>`
   color: ${props => props.color || '#ffffff'};
   font-size: 14;
   font-weight: bold;

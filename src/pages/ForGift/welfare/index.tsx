@@ -6,7 +6,7 @@ import {View} from 'react-native';
 
 const NavBar = () => {};
 
-export const topView = () => {
+export const welfare = () => {
   //   const [value, setValue] = useState(0);
   // const value = 0;
   return <StyledContent1>{NavBar()}</StyledContent1>;

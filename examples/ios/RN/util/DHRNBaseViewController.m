@@ -9,9 +9,6 @@
 #import "DHRNBaseViewController.h"
 
 @interface DHRNBaseViewController ()
-
-@property (nonatomic) NSDictionary *common;
-
 @end
 
 @implementation DHRNBaseViewController
@@ -21,26 +18,43 @@
     // Do any additional setup after loading the view.
 }
 -(void)initData{
-    [super initData];
-//    self.openBaseRouteBackBtn = YES;
-//    self.networkConfig = [[NSMutableDictionary alloc] init];
-//    [self.networkConfig setValue:AppInfo().ip forKey:@"client-ip"];
-//    [self.networkConfig setValue:QJ_DEVICEID forKey:@"device-id"];
-//    [self.networkConfig setValue:@"ios" forKey:@"platform"];
-//    [self.networkConfig setValue:AppInfo().appVersion forKey:@"app-version"];
-//    [self.networkConfig setValue:AppInfo().appkey forKey:@"appkey"];
-//    [self.networkConfig setValue:NetworkConfig().appChannel forKey:@"channel-name"];
-//    [self.networkConfig setValue:NetworkConfig().appChannel forKey:@"channel-code"];
-//    [self.networkConfig setValue:AppInfo().stationID forKey:@"app-id"];
-//    [self.networkConfig setValue:AppInfo().CID forKey:@"client-id"];
-//    [self.networkConfig setValue:[NSString stringWithFormat:@"%.f",[[UIScreen mainScreen] bounds].size.width] forKey:@"screenWidth"];
-//    [self.networkConfig setValue:[NSString stringWithFormat:@"%.f",[[UIScreen mainScreen] bounds].size.height] forKey:@"screenHeight"];
-//    if (AppInfo().selectCityModel) {
-//        [self.networkConfig setValue:AppInfo().selectCityName forKey:@"area_cn"];
-//        [self.networkConfig setValue:AppInfo().selectCityNameP forKey:@"city"];
-//    }else {
-//        [self.networkConfig setValue:@"other" forKey:@"area_cn"];
-//    }
+  [super initData];
+  self.networkConfig= [NSMutableDictionary dictionaryWithCapacity:5];
+  
+  NSString * host = @"http//:zxtt.jia.com/";
+#ifdef DEBUG
+  host = @"http//:api-zxtt.zxtt.qa.qeeka.com/";
+#endif
+  
+  
+  [self.networkConfig addEntriesFromDictionary:@{@"host":host,
+                                                 @"h5Host":@"https://:h5.m.jia.com/",
+                                                 @"headerConfig":@{
+                                                 @"app-id" : @"800",
+                                                 @"appkey" : @"015a5f879a124a258f51cf89ea21a701",
+                                                 @"idfa" : @"4DF19967-45D3-4C04-8D7C-1FA604116508",
+                                                 @"client-ip" : @"192.168.31.49",
+                                                 @"deviceId" : @"7FAA1FDB-D231-4BD5-8CA6-B75E0152A8BC",
+                                                 @"devicePlatform" : @"iOS",
+                                                 @"channel-code" : @"AppStore",
+                                                 @"deviceIMEI" : @"7FAA1FDB-D231-4BD5-8CA6-B75E0152A8BC",
+                                                 @"packageName" : @"com.qijia.o2o",
+                                                 @"appChannel" : @"AppStore",
+                                                 @"appVersion" : @"3.4.0",
+                                                 @"screenHeight" : @"896",
+                                                 @"from-app" : @"Y",
+                                                 @"city" : @"shanghai",
+                                                 @"sessionId" : @"09f773c7-ef37-4c75-8ee8-67960029ec92",
+                                                 @"device-id" : @"7FAA1FDB-D231-4BD5-8CA6-B75E0152A8BC",
+                                                 @"platform" : @"ios",
+                                                 @"channel-name" : @"AppStore",
+                                                 @"area_cn" : @"上海",
+                                                 @"appId" : @"800",
+                                                 @"screenWidth" : @"414",
+                                                 @"app-version" : @"3.4.0",
+                                                 @"client-id" : @"18b983b9ff9e57bff740e5c2c9902941",
+                                                 @"userId" : @"101526953"
+                                                 }}];
 }
 
 @end
