@@ -1,7 +1,7 @@
 
 import React, { useState } from 'react';
 import * as main from './style';
-//import Button from '../../../components/Button';
+import Button from '../../../components/Button';
 import { View } from 'react-native';
 export const signInTitle = () => {
   return (
@@ -29,15 +29,15 @@ export const signInPointView = (point: number, day: number) => {
     </main.signCircleBox>
   );
 };
-// export const submitButton = () => {
-//   return (
-//     <Button>
-//       <main.StyledSubmit end={{ x: 1, y: 0 }} colors={['#FF835C', '#FF5648']}>
-//         <main.StyledSubmitText>签到领金币</main.StyledSubmitText>
-//       </main.StyledSubmit>
-//     </Button>
-//   );
-// };
+export const submitButton = () => {
+  return (
+    <Button>
+      <main.StyledSubmit end={{ x: 1, y: 0 }} colors={['#FF835C', '#FF5648']}>
+        <main.StyledSubmitText>签到领金币</main.StyledSubmitText>
+      </main.StyledSubmit>
+    </Button>
+  );
+};
 
 export const topView = () => {
   //   const [value, setValue] = useState(0);
@@ -57,7 +57,7 @@ export const topView = () => {
         {pointArray.map((item, index) => signInPointView(item, index + 1))}
       </main.signCircleBoxListView>
       {/* <DashLine lineWidth={2} /> */}
-      {/* {submitButton()} */}
+      {submitButton()}
 
 
     </main.mainView >
