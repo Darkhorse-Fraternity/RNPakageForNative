@@ -205,7 +205,7 @@ const render = () => {
   return (
     <Background source={require('../../../source/img/OneMinuteStudy/back.png')}>
       {/* {page1()}    */}
-      {page2()}
+      {page1()}
     </Background>
   );
 };

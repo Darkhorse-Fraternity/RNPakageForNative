@@ -22,7 +22,6 @@
 }
 -(void)initData{
     [super initData];
-//    self.openBaseRouteBackBtn = YES;
 //    self.networkConfig = [[NSMutableDictionary alloc] init];
 //    [self.networkConfig setValue:AppInfo().ip forKey:@"client-ip"];
 //    [self.networkConfig setValue:QJ_DEVICEID forKey:@"device-id"];
