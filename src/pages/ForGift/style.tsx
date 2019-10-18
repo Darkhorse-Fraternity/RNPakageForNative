@@ -28,7 +28,7 @@ export const StyledTop = styled.ImageBackground`
 
 export const StyledCoinView = styled.TouchableOpacity`
   flex-direction: row;
-  margin-bottom: 70;
+  margin-bottom: ${125 - StatusBarHeight};
   margin-left: 15;
   align-items: center;
 `;

@@ -1,14 +1,15 @@
 import styled from 'styled-components';
+import {StatusBarHeight} from '../../../components/Nav/bar';
 
 export const StyledContent1 = styled.View`
   height: 270;
   /* width: 100%-30px; */
-  margin: -82px 15px 0px 15px;
+  margin: ${StatusBarHeight - 110}px 15px 0px 15px;
   background-color: white;
   border-radius: 5px;
 `;
 export const StyledContent2 = styled.View`
-  flexDirection:row;
+  flex-direction: row;
   height: 13;
   /* width: 100%-30px; */
   margin: 21px 0px 15px 17px;
