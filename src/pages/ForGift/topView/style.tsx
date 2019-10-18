@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 import {StatusBarHeight} from '../../../components/Nav/bar';
+import LinearGradient from 'react-native-linear-gradient';
+
 
 export const StyledContent1 = styled.View`
   height: 270;
@@ -22,4 +24,18 @@ export const StyledTitle = styled.Text`
 export const StyledTitle1 = styled.Text`
   color: 'rgb(256,57,48)';
   font-size: 14;
+`;
+
+export const StyledSubmit = styled(LinearGradient)`
+  align-items: center;
+  width: ${props => (props.theme.width - 60) / 2};
+  height: 38;
+  border-radius: 19;
+  justify-content: center;
+`;
+
+export const StyledSubmitText = styled.Text`
+  color: ${props => props.color || '#ffffff'};
+  font-size: 14;
+  font-weight: bold;
 `;
