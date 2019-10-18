@@ -70,7 +70,16 @@ export const titleEBB795 = styled.Text`
   font-size: 10;
 `;
 
+export const ButtonView = styled.View`
+  margin: 40px 0px 0px 0px;
+  align-items: center;
+  justify-content: center;
+  height: 38;
+  background-color: white;
+`;
+
 export const StyledSubmit = styled(LinearGradient)`
+  margin: 40px 0px 0px 0px;
   align-items: center;
   width: ${props => (props.theme.width - 60) / 2};
   height: 38;
@@ -85,4 +94,9 @@ export const StyledSubmitText = styled.Text<StyledSubmitTextProps>`
   color: ${props => props.color || '#ffffff'};
   font-size: 14;
   font-weight: bold;
+`;
+export const giftBoxImage = styled.ImageBackground`
+  width: 40;
+  height: 40;
+  flex-direction: column-reverse;
 `;
