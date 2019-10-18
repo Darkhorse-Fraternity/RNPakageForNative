@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import * as main from './style';
 import Button from '../../../components/Button';
 import { View } from 'react-native';
+//签到文本
 export const signInTitle = () => {
   return (
     <main.titleView>
@@ -12,10 +13,14 @@ export const signInTitle = () => {
     </main.titleView>
   );
 };
-
+//登录7天的奖励View
 export const signInPointView = (point: number, day: number) => {
-  return (
-    <main.signCircleBox key={day}>
+  let porinOrGift;
+  if (day == 2 || day == 7) {
+    porinOrGift = (<main.giftBoxImage source={require('../../../../source/img/forGift/TreasureChest.png')}></main.giftBoxImage>
+    )
+  } else {
+    porinOrGift = (
       <main.signCircleOut>
         <main.signCircleIn>
           <main.titleBC6226>
@@ -23,19 +28,30 @@ export const signInPointView = (point: number, day: number) => {
           </main.titleBC6226>
         </main.signCircleIn>
       </main.signCircleOut>
+    )
+  }
+
+
+  return (
+    <main.signCircleBox key={day}>
+      {porinOrGift}
       <main.titleEBB795>
         {day}天
       </main.titleEBB795>
     </main.signCircleBox>
   );
 };
+//签到按钮
 export const submitButton = () => {
   return (
-    <Button>
-      <main.StyledSubmit end={{ x: 1, y: 0 }} colors={['#FF835C', '#FF5648']}>
-        <main.StyledSubmitText>签到领金币</main.StyledSubmitText>
-      </main.StyledSubmit>
-    </Button>
+    <main.ButtonView>
+      <Button>
+        <main.StyledSubmit end={{ x: 1, y: 0 }} colors={['#FF835C', '#FF5648']}>
+          <main.StyledSubmitText>签到领金币</main.StyledSubmitText>
+        </main.StyledSubmit>
+      </Button>
+    </main.ButtonView>
+
   );
 };
 
@@ -44,22 +60,14 @@ export const topView = () => {
   // const value = 0;
   const pointArray = [5, 0, 8, 12, 18, 26, 0]
   const pointViewArray = []
-  // for (let index = 0; index < 7; index++) {
-  //   pointViewArray.push(signInPointView(pointArray[index], index + 1))
-  // }
 
   return (
-
     <main.mainView>
-
       {signInTitle()}
       <main.signCircleBoxListView>
         {pointArray.map((item, index) => signInPointView(item, index + 1))}
       </main.signCircleBoxListView>
-      {/* <DashLine lineWidth={2} /> */}
       {submitButton()}
-
-
     </main.mainView >
   );
 };
