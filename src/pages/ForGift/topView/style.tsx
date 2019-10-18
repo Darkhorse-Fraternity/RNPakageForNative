@@ -1,11 +1,11 @@
 import styled from 'styled-components/native';
-//import { StatusBarHeight } from '../../../components/Nav/bar';
-//import LinearGradient from 'react-native-linear-gradient';
+import { StatusBarHeight } from '../../../components/Nav/bar';
+import LinearGradient from 'react-native-linear-gradient';
 
 export const mainView = styled.View`
   height: 270;
   /* width: 100%-30px; */
-  margin: -81px 15px 0px 15px;
+  margin: ${StatusBarHeight - 110}px 15px 0px 15px;
   background-color: white;
   border-radius: 5px;
 `;
@@ -70,13 +70,14 @@ export const titleEBB795 = styled.Text`
   font-size: 10;
 `;
 
-// export const StyledSubmit = styled(LinearGradient)`
-//   align-items: center;
-//   width: ${props => (props.theme.width - 60) / 2};
-//   height: 38;
-//   border-radius: 19;
-//   justify-content: center;
-// `;
+export const StyledSubmit = styled(LinearGradient)`
+  align-items: center;
+  width: ${props => (props.theme.width - 60) / 2};
+  height: 38;
+  border-radius: 19;
+  justify-content: center;
+`;
+
 interface StyledSubmitTextProps {
   color?: string;
 }

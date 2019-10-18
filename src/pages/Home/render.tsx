@@ -30,7 +30,7 @@ const render = () => {
   // 使用 useCallback 将PageItem转为记忆函数提高性能。
   const routesNames =  [
     {pageName:'forGift',title:'签到好礼'},
-    {pageName:'onemstudy',title:'一分钟学习'},
+    {pageName:'oneMStudy',title:'一分钟学习'},
   ];
 
 
