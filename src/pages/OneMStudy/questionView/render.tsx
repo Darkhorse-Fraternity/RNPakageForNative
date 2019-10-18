@@ -15,7 +15,7 @@ import { isAbsolute } from 'path';
 
 const data = [
   {
-    title:"a",
+    title:"什么是建材保温材料 建材保温材料有哪些？",
     answer:["aaa","bbb","ccc"],
     right:1,
   },
@@ -40,12 +40,37 @@ const data = [
     right:5,
   }
 ]
+const question=()=>{
+  let myRef = React.createRef(); 
+  let title=data[0].title;
+  let answer=data[0].answer;
+  let right=data[0].right;
+  return(
+    <ScrollView 
+    horizontal={true} 
+    scrollEnabled={false} 
+    showsHorizontalScrollIndicator={false}
+    >
+      <View>
+        <Question>               
+          {title}                        
+        </Question>
+        <OptionBtn underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>{answer[0]}</OptionTx></OptionBtn>
+        <OptionBtn style={{marginTop:30}} underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>{answer[1]}</OptionTx></OptionBtn>
+        <OptionBtn style={{marginTop:30}} underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>{answer[2]}</OptionTx></OptionBtn>
+      </View>
+      <View>
+        <Question>               
+          {title}                        
+        </Question>
+        <OptionBtn underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>{answer[0]}</OptionTx></OptionBtn>
+        <OptionBtn style={{marginTop:30}} underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>{answer[1]}</OptionTx></OptionBtn>
+        <OptionBtn style={{marginTop:30}} underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>{answer[2]}</OptionTx></OptionBtn>
+      </View>
+    </ScrollView>
+  );
+}
 export const page1=()=>{
-  const next=()=>{
-      let title=data[0].title;
-      let answer=data[0].answer;
-      let right=data[0].right;
-  }
   return(
     <View style={{flex:1}}>
     <TopImage source={require('../../../../source/img/OneMinuteStudy/top.png')}/>
@@ -56,14 +81,7 @@ export const page1=()=>{
         <Sum>/5</Sum>
         <Line style={{left:0}}></Line>
       </View>
-      <ScrollView>
-      <Question>               
-        什么是建材保温材料 建材保温材料有哪些？                        
-      </Question>
-      <OptionBtn underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>选项选项选项选项选项</OptionTx></OptionBtn>
-      <OptionBtn style={{marginTop:30}} underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>answer1</OptionTx></OptionBtn>
-      <OptionBtn style={{marginTop:30}} underlayColor={'#FFC853'} onPress={()=>{}}><OptionTx>answer1</OptionTx></OptionBtn>
-      </ScrollView>
+      {question()}
     </BoardImage>
     </View>
   );
