@@ -1,7 +1,7 @@
 import React, {PureComponent} from 'react';
 import {StatusBar} from 'react-native';
 import {ThemeProvider} from 'styled-components';
-import theme from '../theme';
+import {theme} from '../theme';
 import {creactAppContainer} from './pages';
 // import { setUserInfo } from './help/tool';
 // import {setConfigNative, setTrackingId} from './configure/reqConfigs'

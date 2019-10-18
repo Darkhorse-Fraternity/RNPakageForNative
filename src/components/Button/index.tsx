@@ -8,8 +8,12 @@ import {
   View,
 } from 'react-native';
 
+interface Props {
+  onPress: Function;
+}
+
 const withPreventDoubleClick = WrappedComponent => {
-  class PreventDoubleClick extends React.PureComponent {
+  class PreventDoubleClick extends React.PureComponent<Props> {
     debouncedOnPress = () => {
       this.props.onPress && this.props.onPress();
     };
@@ -45,4 +49,4 @@ const ButtonAndroid = props => (
 
 const button = Platform.OS === 'ios' ? TouchableOpacity : ButtonAndroid;
 
-module.exports = withPreventDoubleClick(button);
+export default withPreventDoubleClick(button);
