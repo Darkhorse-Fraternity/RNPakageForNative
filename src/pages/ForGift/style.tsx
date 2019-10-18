@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 import {SafeAreaView} from 'react-navigation';
 import {StatusBarHeight} from '../../components/Nav/bar';
+import Button from '../../components/Button';
 
 export const StyledContent = styled.View`
   flex: 1;
@@ -13,43 +14,31 @@ export const StyledText = styled.Text`
   width: 100;
 `;
 
-export const StyledBtn = styled.TouchableOpacity`
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  margin: 20px;
-`;
-
 export const StyledTop = styled.ImageBackground`
   width: 100%;
   height: 197;
+  flex-direction: column-reverse;
 `;
 
-export const StyledNavbar = styled.View`
-  width: 100%;
-  background-color: transparent;
-  z-index: 100;
-  position: absolute;
-  align-items: center;
+export const StyledCoinView = styled(Button)`
   flex-direction: row;
-  justify-content: space-between;
-  height: ${props => StatusBarHeight + 44};
-  padding-top: ${props => StatusBarHeight};
-  /* padding-bottom: 15px;  */
-  /* background-color: red; */
+  margin-bottom: ${125 - StatusBarHeight};
+  margin-left: 15;
+  align-items: center;
+  max-width: 150;
 `;
-// eslint-disable-next-line import/prefer-default-export
-export const StyledArrow = styled.TouchableOpacity`
+
+export const StyledCoinText = styled.Text`
+  color: white;
+  font-size: 16;
+`;
+
+export const StyledCoinArrow = styled.View`
   border-bottom-width: ${props => props.theme.hairlineWidth * 5};
   border-right-width: ${props => props.theme.hairlineWidth * 5};
   border-color: ${props => props.color || 'white'};
-  transform: rotate(135deg);
-  width: 10;
-  height: 10;
-  left: 20;
-`;
-
-export const StyledTitle = styled.Text`
-  color: white;
-  font-size: 17;
+  transform: rotate(-45deg);
+  width: 6;
+  height: 6;
+  left: 5;
 `;

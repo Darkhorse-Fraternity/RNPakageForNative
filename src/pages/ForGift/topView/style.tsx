@@ -1,16 +1,18 @@
 import styled from 'styled-components';
+//import { StatusBarHeight } from '../../../components/Nav/bar';
+//import LinearGradient from 'react-native-linear-gradient';
+
 
 export const mainView = styled.View`
   height: 270;
   /* width: 100%-30px; */
-  margin: -82px 15px 0px 15px;
+  margin: -81px 15px 0px 15px;
   background-color: white;
   border-radius: 5px;
 `;
 export const titleView = styled.View`
   flex-direction:row;
   height: 16;
-  /* width: 100%-30px; */
   margin: 21px 0px 0px 17px;
   background-color: white;
 `;
@@ -22,6 +24,7 @@ export const titleRed = styled.Text`
   color: 'rgb(256,57,48)';
   font-size: 14;
 `;
+
 //圆圈style
 
 export const signCircleBoxListView = styled.View`
@@ -68,3 +71,16 @@ export const titleEBB795 = styled.Text`
   font-size: 10;
 `;
 
+// export const StyledSubmit = styled(LinearGradient)`
+//   align-items: center;
+//   width: ${props => (props.theme.width - 60) / 2};
+//   height: 38;
+//   border-radius: 19;
+//   justify-content: center;
+// `;
+
+export const StyledSubmitText = styled.Text`
+  color: ${props => props.color || '#ffffff'};
+  font-size: 14;
+  font-weight: bold;
+`;

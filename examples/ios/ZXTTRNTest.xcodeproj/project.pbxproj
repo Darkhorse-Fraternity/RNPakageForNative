@@ -222,8 +222,8 @@
 		77356BB62356EE0100ACEAD7 /* RouterBridge */ = {
 			isa = PBXGroup;
 			children = (
-				77356BB72356EE0100ACEAD7 /* RouterBridge.m */,
 				77356BB82356EE0100ACEAD7 /* RouterBridge.h */,
+				77356BB72356EE0100ACEAD7 /* RouterBridge.m */,
 			);
 			path = RouterBridge;
 			sourceTree = "<group>";

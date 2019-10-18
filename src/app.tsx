@@ -30,15 +30,19 @@ interface PropsApp {
 // }
 
 const AppView = (props: PropsApp) => {
-  const {initialRouteName, openBaseRouteBackBtn} = props;
+  const {initialRouteName, openBaseRouteBackBtn = true} = props;
   const AppContainer = creactAppContainer(
     initialRouteName,
     openBaseRouteBackBtn,
   );
   return (
     <ThemeProvider theme={theme}>
-      <StatusBar backgroundColor="white" barStyle="dark-content" translucent />
-      <AppContainer />
+      <StatusBar
+        backgroundColor="transparent"
+        barStyle="dark-content"
+        translucent
+      />
+      <AppContainer screenProps={{initialRouteName, openBaseRouteBackBtn}} />
     </ThemeProvider>
   );
 };

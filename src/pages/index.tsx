@@ -1,6 +1,6 @@
-import { createAppContainer,CreateNavigatorConfig} from 'react-navigation';
+import {createAppContainer, CreateNavigatorConfig} from 'react-navigation';
 import {NativeModules, Platform} from 'react-native';
-import {createStackNavigator } from 'react-navigation-stack'
+import {createStackNavigator} from 'react-navigation-stack';
 // 默认背景色
 import {defaultNavigationOptions} from '../components/Nav/navigationOptions';
 import {TransitionConfiguration} from '../components/Nav/navigators/TransitionConfiguration';
@@ -8,12 +8,12 @@ import {setRouteState} from '../components/Nav/navigators/stateStore';
 import {tackerView} from '../components/TjjAnalytics';
 import baseRoute from './baseRoute';
 import React from 'react';
-import {NativeBackButton} from '../components/Nav/HeaderBackButton'
+import {NativeBackButton} from '../components/Nav/HeaderBackButton';
 // const {Tool} = NativeModules;
 // const {backHandleControl} = Tool;
 
 const cardStyle = {backgroundColor: 'white'};
-const stackDefoultConfig:CreateNavigatorConfig = {
+const stackDefoultConfig: CreateNavigatorConfig = {
   defaultNavigationOptions,
   transitionConfig: TransitionConfiguration,
   cardStyle,
@@ -28,17 +28,29 @@ const stackDefoultConfig:CreateNavigatorConfig = {
 
 // const initialRouteName = 'findDesigner';
 
-export function creactAppContainer(initialRouteName: string = "home",openBaseRouteBackBtn:boolean = true ) {
-   // 如果页面headerLeft要重写 则从这边进行判断。
-  const  initialRoute = baseRoute[initialRouteName] || {};
-  initialRoute.screenProps={openBaseRouteBackBtn}
-  if(openBaseRouteBackBtn){
+export function creactAppContainer(
+  initialRouteName: string = 'home',
+  openBaseRouteBackBtn: boolean = true,
+) {
+  // 如果页面headerLeft要重写 则从这边进行判断。
+  const initialRoute = baseRoute[initialRouteName] || {};
+  initialRoute.screenProps = {openBaseRouteBackBtn};
+
+  const header =
+    initialRoute.navigationOptions && initialRoute.navigationOptions().header;
+
+  if (openBaseRouteBackBtn && header !== null) {
     //是否开启返回按钮
     initialRoute.navigationOptions = {
-      headerLeft:(<NativeBackButton color={defaultNavigationOptions.headerTintColor} style={{marginLeft: 30}}/>)
+      headerLeft: (
+        <NativeBackButton
+          color={defaultNavigationOptions.headerTintColor}
+          style={{marginLeft: 30}}
+        />
+      ),
     };
   }
- 
+
   const BaseStack = createStackNavigator(
     {
       ...baseRoute,

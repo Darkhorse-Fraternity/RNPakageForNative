@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import {StatusBarHeight} from '../../components/Nav/bar';
-
+import {StatusBarHeight} from '../index';
+import {Animated} from 'react-native';
 export const StyledNavbar = styled.View`
   width: 100%;
   background-color: transparent;
@@ -15,7 +15,7 @@ export const StyledNavbar = styled.View`
   /* background-color: red; */
 `;
 // eslint-disable-next-line import/prefer-default-export
-export const StyledArrow = styled.TouchableOpacity`
+export const StyledArrow = styled.View`
   border-bottom-width: ${props => props.theme.hairlineWidth * 5};
   border-right-width: ${props => props.theme.hairlineWidth * 5};
   border-color: ${props => props.color || 'white'};
@@ -25,7 +25,8 @@ export const StyledArrow = styled.TouchableOpacity`
   left: 20;
 `;
 
-export const StyledTitle = styled.Text`
+export const StyledTitle = styled(Animated.Text)`
   color: white;
-  font-size: 17;
+  font-size: 18;
+  font-weight: 400;
 `;

@@ -31,7 +31,7 @@
     self = [super init];
     if(self){
         self.initialRouteName = initialRouteName;
-        
+        self.openBaseRouteBackBtn = YES;
     }
     return self;
 }
