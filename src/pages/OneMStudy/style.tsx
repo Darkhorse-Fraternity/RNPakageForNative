@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 // import {SafeAreaView} from 'react-navigation';
 
@@ -19,13 +19,3 @@ export const StyledBtn = styled.TouchableOpacity`
   align-items:center;
   padding:15px;
 `;
-
-export const StyledArrow = styled.View`
-  border-bottom-width: ${props => props.theme.hairlineWidth * 2};
-  border-right-width: ${props => props.theme.hairlineWidth * 2};
-  border-color: ${props => props.color || 'black'};
-  transform: rotate(-45deg);
-  width: 10;
-  height: 10;
-`;
-

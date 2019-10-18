@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled from 'styled-components/native';
 
 export const TopImage = styled.Image`
   align-self: center;
@@ -37,6 +37,7 @@ export const Sum = styled.Text`
   line-height:33px;
 `;
 export const OptionBtn = styled.TouchableHighlight`
+  margin-left:28;
   align-self: center;
   width:291.5px;
   height:55px;
@@ -53,7 +54,7 @@ export const OptionTx = styled.Text`
   line-height:30px;
 `;
 export const Question = styled.Text`
-  left:19.5;
+  margin-left:28;
   width:302px;
   height:97px;
   font-size:20px;
