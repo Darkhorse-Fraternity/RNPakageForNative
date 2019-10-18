@@ -21,9 +21,9 @@
   [super initData];
   self.networkConfig= [NSMutableDictionary dictionaryWithCapacity:5];
   
-  NSString * host = @"http//:zxtt.jia.com/";
+  NSString * host = @"http://zxtt.jia.com/";
 #ifdef DEBUG
-  host = @"http//:api-zxtt.zxtt.qa.qeeka.com/";
+  host = @"http://api-zxtt.zxtt.qa.qeeka.com/";
 #endif
   
   

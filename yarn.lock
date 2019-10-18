@@ -1461,6 +1461,11 @@ async@^2.4.0:
   dependencies:
     lodash "^4.17.14"
 
+async@^3.1.0:
+  version "3.1.0"
+  resolved "https://registry.yarnpkg.com/async/-/async-3.1.0.tgz#42b3b12ae1b74927b5217d8c0016baaf62463772"
+  integrity sha512-4vx/aaY6j/j3Lw3fbCHNWP0pPaTCew3F6F3hYyl/tHs/ndmV1q7NW9T5yuJ2XAGwdQrP+6Wu20x06U4APo/iQQ==
+
 asynckit@^0.4.0:
   version "0.4.0"
   resolved "https://registry.yarnpkg.com/asynckit/-/asynckit-0.4.0.tgz#c79ed97f7f34cb8f2ba1bc9790bcc366474b4b79"
@@ -5728,6 +5733,13 @@ react-is@^16.6.0, react-is@^16.7.0, react-is@^16.8.1, react-is@^16.8.4, react-is
   version "16.9.0"
   resolved "https://registry.yarnpkg.com/react-is/-/react-is-16.9.0.tgz#21ca9561399aad0ff1a7701c01683e8ca981edcb"
   integrity sha512-tJBzzzIgnnRfEm046qRcURvwQnZVXmuCbscxUO5RWrGTXpon2d4c8mI0D8WE6ydVIm29JiLB6+RslkIvym9Rjw==
+
+react-native-cache@^1.1.8:
+  version "1.1.8"
+  resolved "https://registry.yarnpkg.com/react-native-cache/-/react-native-cache-1.1.8.tgz#9815139b0dad594f3abb16ae04caa5058fbc744a"
+  integrity sha512-PKDI66Uqi6EcIPr2qkUXtirovRGPRLMwA0+HlwRJkU/FZoAhTNKpqkoGmKesMBXIFbgaSLskqj/3uRtbIwUFrA==
+  dependencies:
+    async "^3.1.0"
 
 react-native-code-push@5.7.0:
   version "5.7.0"

@@ -18,10 +18,11 @@ export let apiHostNative = '';
 
 let config = {};
 export const setConfigNative = nConfig => {
+  config = nConfig;
   if (Platform.OS !== 'ios') {
-    config.headerConfig === JSON.parse(config.headerConfig);
+    config.networkConfig === JSON.parse(config.networkConfig);
   }
-  apiHostNative = nConfig.host;
+  apiHostNative = nConfig.networkConfig.host;
 };
 
 let trackingId;
@@ -54,5 +55,5 @@ export function httpHeaders() {
 
   // console.log('LeanCloud_APP_Session', LeanCloud_APP_Session);
 
-  return config.headerConfig;
+  return config.networkConfig.headerConfig;
 }

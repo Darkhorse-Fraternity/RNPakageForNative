@@ -111,6 +111,14 @@ function errorShow(data) {
 }
 
 // 参数转化
+interface StyledArrowProps {
+  scheme?: string;
+  host?: string;
+  query?: string;
+  path?: string;
+  header?: string;
+}
+
 export const req = ({
   scheme = schemeType.http,
   host = apiHost,
@@ -118,12 +126,10 @@ export const req = ({
   path,
   header,
   ...other
-}) => {
+}: StyledArrowProps) => {
   // const urlpath = `${scheme}://${host}${path}`;
 
   const urlpath = `${apiHostNative}${path}`;
-  // console.log('urlpath', urlpath);
-
   const headers = header || httpHeaders();
   const url = !query ? urlpath : addParams(urlpath, query);
   return reqCache({
