@@ -1,11 +1,12 @@
 import styled from 'styled-components/native';
-import { StatusBarHeight } from '../../../components/Nav/bar';
+// import {getStatusBarHeight} from '../../../components/Nav/bar';
 import LinearGradient from 'react-native-linear-gradient';
+// const {StatusBarHeight} = require('../../../components/Nav/bar');
 
 export const mainView = styled.View`
   height: 270;
   /* width: 100%-30px; */
-  margin: ${StatusBarHeight - 110}px 15px 0px 15px;
+  margin: ${props => props.theme.getStatusBarHeight() - 110}px 15px 0px 15px;
   background-color: white;
   border-radius: 5px;
 `;

@@ -11,4 +11,8 @@ if (Platform.OS === 'ios') {
   });
 }
 
+export const getStatusBarHeight = () => {
+  return StatusBarHeight;
+};
+
 export {StatusBarHeight};

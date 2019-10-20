@@ -19,7 +19,6 @@
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
   DHRNBaseViewController *rootViewController = [DHRNBaseViewController new];
 //  rootViewController.openBaseRouteBackBtn = true;
-//  rootViewController.initialRouteName=@"onemstudy";
   //  rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];

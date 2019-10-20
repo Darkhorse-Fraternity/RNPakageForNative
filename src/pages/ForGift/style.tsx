@@ -22,7 +22,7 @@ export const StyledTop = styled.ImageBackground`
 
 export const StyledCoinView = styled(Button)`
   flex-direction: row;
-  margin-bottom: ${125 - StatusBarHeight};
+  margin-bottom: ${props => 125 - props.theme.getStatusBarHeight()};
   margin-left: 15;
   align-items: center;
   max-width: 150;
