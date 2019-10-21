@@ -40,7 +40,8 @@ const render = () => {
         {coinView(100)}
       </StyledTop>
       {topView()}
-      {giftView()}
+      {/* {giftView()} */}
+      {welfare()}
     </StyledContent>
   );
 };

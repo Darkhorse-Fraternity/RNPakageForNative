@@ -32,6 +32,7 @@ public class MainActivity extends RNActivity {
           @Override
           protected Bundle getLaunchOptions() {
               Bundle bundle=new Bundle();
+              bundle.putString("networkConfig", RequestHeader.getInstance().getHeaderJsonStr());
               //往bundle中添加启动属性键值对
               bundle.putBoolean("openBaseRouteBackBtn", false );
               return bundle;

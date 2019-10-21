@@ -20,9 +20,13 @@ let config = {};
 export const setConfigNative = nConfig => {
   config = nConfig;
   if (Platform.OS !== 'ios') {
-    config.networkConfig === JSON.parse(config.networkConfig);
+    const networkConfig = JSON.parse(config.networkConfig);
+    const headerConfig = JSON.parse(networkConfig.headerConfig);
+    config.networkConfig = networkConfig;
+    config.networkConfig.headerConfig = headerConfig;
+    console.log('n', networkConfig);
   }
-  apiHostNative = nConfig.networkConfig.host;
+  apiHostNative = config.networkConfig.host;
 };
 
 let trackingId;
