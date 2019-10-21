@@ -7,12 +7,13 @@ import {
   StyledCoinArrow,
   StyledInner,
 } from './style';
-import {NativeModules} from 'react-native';
+import {NativeModules, Dimensions} from 'react-native';
 import {View} from 'react-native';
 import {topView} from './topView';
 import {giftView} from './giftView';
 import {welfare} from './welfare'; //福利页面
 import {NavBar} from '../../components/Nav/bar/TSNavBar';
+const {height} = Dimensions.get('window');
 
 const {RouterBridge} = NativeModules;
 const coinView = coin => {
@@ -38,10 +39,9 @@ const render = () => {
     <StyledContent>
       {/* <StatusBar translucent={true} backgroundColor='transparent' barStyle="dark-content" /> */}
       <NavBar title={'签到好礼'} />
-      <StyledInner>
-        <StyledTop source={require('../../../source/img/forGift/GiftTop.png')}>
-          {coinView(100)}
-        </StyledTop>
+      <StyledTop source={require('../../../source/img/forGift/GiftTop.png')} />
+      <StyledInner scrollEnabled={height < 700}>
+        {coinView(100)}
         {topView()}
         {/* {giftView()} */}
         {welfare()}

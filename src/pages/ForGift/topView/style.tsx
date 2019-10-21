@@ -6,7 +6,7 @@ import LinearGradient from 'react-native-linear-gradient';
 export const mainView = styled.View`
   height: 270;
   /* width: 100%-30px; */
-  margin: ${props => props.theme.getStatusBarHeight() - 110}px 15px 0px 15px;
+  margin: 0px 15px 0px 15px;
   background-color: white;
   border-radius: 5px;
 `;
@@ -100,4 +100,17 @@ export const giftBoxImage = styled.ImageBackground`
   width: 40;
   height: 40;
   flex-direction: column-reverse;
+`;
+
+interface StyledGoldGifProps {
+  left?: number;
+}
+
+export const styledGoldGif = styled.Image<StyledGoldGifProps>`
+  width: 45;
+  height: 70;
+  z-index: 100;
+  position: absolute;
+  left: ${props => props.left};
+  margin-top: 20;
 `;

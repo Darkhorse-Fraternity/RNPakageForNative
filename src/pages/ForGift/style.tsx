@@ -9,7 +9,7 @@ export const StyledContent = styled.View`
 `;
 
 export const StyledInner = styled.ScrollView`
-  flex: 1;
+  margin-top: ${props => props.theme.getStatusBarHeight() - 150}px;
 `;
 
 export const StyledText = styled.Text`
@@ -26,7 +26,7 @@ export const StyledTop = styled.ImageBackground`
 
 export const StyledCoinView = styled(Button)`
   flex-direction: row;
-  margin-bottom: ${props => 125 - props.theme.getStatusBarHeight()};
+  margin-bottom: 15;
   margin-left: 15;
   align-items: center;
   max-width: 150;

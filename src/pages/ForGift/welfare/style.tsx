@@ -2,6 +2,8 @@ import styled from 'styled-components/native';
 import {StatusBarHeight} from '../../../components/Nav/bar';
 import LinearGradient from 'react-native-linear-gradient';
 
+
+
 export const StyledContent1 = styled.View`
   /* width: 100%-30px; */
   margin: 15px 15px 0px 15px;
