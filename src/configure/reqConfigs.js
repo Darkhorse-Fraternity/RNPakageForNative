@@ -24,7 +24,6 @@ export const setConfigNative = nConfig => {
     const headerConfig = JSON.parse(networkConfig.headerConfig);
     config.networkConfig = networkConfig;
     config.networkConfig.headerConfig = headerConfig;
-    console.log('n', networkConfig);
   }
   apiHostNative = config.networkConfig.host;
 };

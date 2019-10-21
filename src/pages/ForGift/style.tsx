@@ -8,6 +8,10 @@ export const StyledContent = styled.View`
   background-color: #f5f6f9;
 `;
 
+export const StyledInner = styled.ScrollView`
+  flex: 1;
+`;
+
 export const StyledText = styled.Text`
   color: #333333;
   font-size: 14;

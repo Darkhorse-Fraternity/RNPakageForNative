@@ -3,7 +3,6 @@ import {StatusBarHeight} from '../../../components/Nav/bar';
 import LinearGradient from 'react-native-linear-gradient';
 
 export const StyledContent1 = styled.View`
-  height: 270;
   /* width: 100%-30px; */
   margin: 15px 15px 0px 15px;
   background-color: white;
@@ -25,12 +24,12 @@ export const StyledContent3 = styled.View`
   align-items: center;
 `;
 export const StyledLine = styled.View`
-  width:100%;
+  width: 100%;
   height: 1;
   background-color: 'rgb(236,235,235)';
 `;
 export const StyledList = styled.View`
-  width:100%;
+  width: 100%;
   height: 227;
 `;
 export const StyledItem = styled.View`
@@ -76,13 +75,13 @@ export const StyledTaskName = styled.Text`
 export const StyledTaskTip = styled.Text`
   color: 'rgb(254,161,66)';
   font-size: 12;
-  margin-right:40px;
+  margin-right: 40px;
 `;
 
 export const StyledProgressText = styled.Text`
   color: 'rgb(153,153,153)';
   font-size: 12;
-  margin-left:9px;
+  margin-left: 9px;
 `;
 
 export const StyledSubmit = styled(LinearGradient)`
