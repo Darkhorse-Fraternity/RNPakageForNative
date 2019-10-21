@@ -35,10 +35,11 @@
   | 视图   | url                                                  |
   | ------ | ---------------------------------------------------- |
   | 课堂   | xxx                                                  |
-  | 齐家币 | zxtt://open/native?params={\"url\":\"task_center\"}" |
-
-
-
+  | 齐家币 | zxtt://open/native?params={\"url\":\"task_center\"} |
+  | 达人 | zxtt://open/native?params={\"url\":\"daren_list\"} |
+  | 点赞 | zxtt://open/native?params={\"url\":\"home_page\",\"data\":{\"open_tab_key\":\"tab_recmd\"}} |
+  | 装修公司 | zxtt://open/native?params={\"url\":\"home_page\",\"data\":{\"open_tab_key\":\"tab_zzx\"}} |
+  
 ### 6. req header 原生传递参数说明
 
 
