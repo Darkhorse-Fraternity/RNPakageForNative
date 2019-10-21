@@ -14,7 +14,7 @@ export function getSaveLevel(level: number = 1) {
   return {
     path: 'hybrid/ability/save-level',
     method: methodType.get,
-    body: {
+    query: {
       level,
     },
   };

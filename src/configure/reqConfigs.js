@@ -2,7 +2,7 @@
 import {NativeModules} from 'react-native';
 import {Platform} from 'react-native';
 const {Tool} = NativeModules;
-const {getUerInfo} = Tool;
+// const {getUerInfo} = Tool;
 
 // import DeviceInfo from 'react-native-device-info'
 import DeviceInfo from 'react-native-device-info';

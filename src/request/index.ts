@@ -41,7 +41,7 @@ function throwIfMissing(paramName: string = ''): string {
   // return '';
 }
 
-function send({url, method, headers, body}) {
+export function send({url, method, headers, body}) {
   // fetch(request, { credentials: 'include' }),
   const contentType = headers['Content-Type'];
   const requestPromise = fetch(url, {
@@ -111,13 +111,27 @@ function errorShow(data) {
 }
 
 // 参数转化
-interface StyledArrowProps {
+export interface reqProps {
   scheme?: string;
   host?: string;
-  query?: string;
+  query?: object;
+  body?:object
   path?: string;
   header?: string;
 }
+
+export interface reqCacheProps {
+  url: string;
+  host?: string;
+  query?: object;
+  headers?:object
+  path?: string;
+  header?: string;
+  body?:object;
+  method?:string;
+  cache?:boolean;
+}
+
 
 export const req = ({
   scheme = schemeType.http,
@@ -126,7 +140,7 @@ export const req = ({
   path,
   header,
   ...other
-}: StyledArrowProps) => {
+}: reqProps) => {
   // const urlpath = `${scheme}://${host}${path}`;
 
   const urlpath = `${apiHostNative}${path}`;
@@ -146,7 +160,7 @@ export const reqCache = async ({
   method = methodType.get,
   cache,
   ...other
-}) => {
+}:reqCacheProps) => {
   // 当没有cache 要求或者 不为get 请求则跳过cahce.
 
   if (cache === undefined && method === methodType.get) {
