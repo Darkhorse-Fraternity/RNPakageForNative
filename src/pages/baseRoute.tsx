@@ -4,7 +4,7 @@ import ForGift from './ForGift';
 
 const baseRoute = {
   home: {screen: Home},
-  onemstudy: {screen: OneMStudy},
+  oneMStudy: {screen: OneMStudy},
   forGift: ForGift,
 };
 export default baseRoute;

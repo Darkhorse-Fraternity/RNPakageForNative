@@ -82,12 +82,12 @@ export const list = () => {
   ];
   return (<StyledList >
     {routesNames.map(item=>
-      useCallback(<PageItem 
-        taskLink={item.taskLink} 
-        taskName={item.taskName} 
-        taskTip={item.taskTip} 
-        buttonText={item.buttonText} 
-        finishedCount={item.finishedCount} 
+      useCallback(<PageItem
+        taskLink={item.taskLink}
+        taskName={item.taskName}
+        taskTip={item.taskTip}
+        buttonText={item.buttonText}
+        finishedCount={item.finishedCount}
         totalCount={item.totalCount}/>,
       ["taskName"]))}
   </StyledList>);

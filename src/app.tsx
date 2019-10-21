@@ -1,21 +1,20 @@
 import React, {PureComponent} from 'react';
 import {StatusBar} from 'react-native';
 import {ThemeProvider} from 'styled-components';
-import theme from '../theme';
+import {theme} from '../theme';
 import {creactAppContainer} from './pages';
-// import { setUserInfo } from './help/tool';
-// import {setConfigNative, setTrackingId} from './configure/reqConfigs'
-import {Platform} from 'react-native';
+import { setUserInfo } from './help/tool';
+import {setConfigNative} from './configure/reqConfigs';
+
 import codePush from 'react-native-code-push';
 require('./configure');
 
 interface PropsApp {
-  readonly user: Object;
-  readonly config: Object;
-  readonly tracking_id: string;
-  readonly api_html_host: string;
-  readonly initialRouteName: string;
-  readonly openBaseRouteBackBtn: boolean;
+  readonly networkConfig: string | Object;
+  readonly user?: string | Object;
+  readonly common?: string | Object;
+  readonly initialRouteName?: string;
+  readonly openBaseRouteBackBtn?: boolean;
 }
 
 // const setNativeConfig = (props: PropsApp)=>{
@@ -48,12 +47,12 @@ const AppView = (props: PropsApp) => {
 };
 
 export const AppMemo = (props: PropsApp) => {
-  // setNativeConfig(props);
+  setConfigNative(props);
   return AppView(props);
 };
 
 @codePush()
-export class App extends PureComponent {
+export class App extends PureComponent<PropsApp> {
   render() {
     const {props} = this;
     return AppMemo(props);

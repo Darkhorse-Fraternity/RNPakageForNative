@@ -7,7 +7,7 @@
 
 #import "AppDelegate.h"
 
-#import <ZXTTInRN/ZMRNBaseViewController.h>
+#import "DHRNBaseViewController.h"
 #import <ZXTTInRN/BridgeManage.h>
 
 @implementation AppDelegate
@@ -17,7 +17,7 @@
   
   [BridgeManage shareInstance].bundleRoot = @"index";
   self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-  ZMRNBaseViewController *rootViewController = [ZMRNBaseViewController new];
+  DHRNBaseViewController *rootViewController = [DHRNBaseViewController new];
 //  rootViewController.openBaseRouteBackBtn = true;
 //  rootViewController.initialRouteName=@"onemstudy";
   //  rootViewController.view = rootView;

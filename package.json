@@ -16,7 +16,7 @@
     "col-aar": "find ./node_modules -iname  \"*-release.aar\" |xargs -I f  cp \"f\" ./Android/zxtt-rn/libs && rm  ./Android/zxtt-rn/libs/hermes-cppruntime-release.aar",
     "and-assemble": "cd examples/android && ./gradlew assembleRelease && cd ../..",
     "and-rn-deploy": "npm run android-bundle && npm run and-assemble && npm run col-aar",
-    "rn-deploy": "npm run os-bundle && npm run and-rn-deploy"
+    "deploy": "npm run ios-bundle && npm run and-rn-deploy"
   },
   "homepage": "http://jia-git.suryani.cn/tony.lin/zxtt-rn.git",
   "license": "MIT",
@@ -42,6 +42,7 @@
     "moment": "2.24.0",
     "react": "16.10.2",
     "react-native": "0.61.2",
+    "react-native-cache": "^1.1.8",
     "react-native-code-push": "5.7.0",
     "react-native-device-info": "4.0.1",
     "react-native-gesture-handler": "1.4.1",
@@ -68,6 +69,7 @@
     "babel-jest": "^24.9.0",
     "babel-plugin-styled-components": "^1.10.6",
     "eslint": "^6.5.1",
+    "eslint-plugin-react-hooks": "^2.1.2",
     "eslint-plugin-typescript": "^0.14.0",
     "jest": "^24.9.0",
     "jetifier": "^1.6.4",
