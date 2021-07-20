@@ -41,7 +41,7 @@
     "lodash": "^4.17.15",
     "moment": "2.24.0",
     "react": "16.10.2",
-    "react-native": "0.61.2",
+    "react-native": "0.62.3",
     "react-native-cache": "^1.1.8",
     "react-native-code-push": "5.7.0",
     "react-native-device-info": "4.0.1",
